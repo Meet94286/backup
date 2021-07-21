@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Flexbox</title>
+	<style>
+	    html, body{
+	    	height:100%;
+		display: flex;
+		justify-content: center;
+	    }
+
+	   .child{
+	        height: 200px;
+		width: 200px;
+		background-color: red;
+		margin: 20px;
+	
+	}
+	.container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		}
+		.main{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+    </style>
+  </head>
+  <body>
+	  <div class="main">
+	<div class="container" >
+	   <div class="child">
+	   </div>
+	   <div class="child">
+	   </div>
+	   <div class="child">
+	   </div>
+	</div>
+	</div>
+  </body>
+</html>

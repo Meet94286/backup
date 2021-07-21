@@ -1,0 +1,2294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"df39dd2989","applicationID":"9529167","transactionName":"d1xaEUJYClRcRk0RA1YcQApAXgVLFkcKCRE=","queueTime":0,"applicationTime":171,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQYGUldRARAJUVNbBgcA",licenseKey:"df39dd2989",applicationID:"9529167"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="author" content="InterviewBit">  
+  <link rel="amphtml" href="https://www.interviewbit.com/courses/programming/topics/time-complexity.amp" />
+  <title>Time Complexity - InterviewBit</title>
+<meta name="description" content="Practice and master all interview questions related to Time Complexity" />
+<meta property="og:url" content="https://www.interviewbit.com/courses/programming/topics/time-complexity/" />
+<meta property="og:title" content="Time Complexity - InterviewBit" />
+<meta property="og:image" content="https://assets.interviewbit.com/assets/ib-logo-904db47f8d2208f21a168bfe4851e0fdcc041f2487b6a8ec0b181d3724dbd012.png.gz" />
+<meta property="og:description" content="Practice and master all interview questions related to Time Complexity" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="InterviewBit" />
+<meta property="og:image:height" content="630px" />
+<meta property="og:image:width" content="1200px" />
+<meta property="og:site" content="InterviewBit" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@interview_bit" />
+<link rel="canonical" href="https://www.interviewbit.com/courses/programming/topics/time-complexity/" />
+
+    <meta name="current-user" data-id="3bb374e553af" data-slug="3bb374e553af" />
+
+<meta name="env-name" data-id="interviewbit" />
+
+    <link rel="icon" type="image/png" href="https://assets.interviewbit.com/assets/ibpp/favicon-fcc4f9cdd2e768e1a9c0b884239242138fd250486c634d791103a152eee669a1.ico.gz">
+  
+  <link rel="manifest" href="/gcm-manifest-ib.json">
+
+  <meta property="fb:app_id" content="314158428787536" />
+  <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://assets.interviewbit.com/assets/html5shiv-940bf793786d48af2279d12fc062f5a688a3c13b7a84078c6d86d936359d2d01.js.gz" media="all"></script>
+  <script src="https://assets.interviewbit.com/assets/respond-bdbeca9c6769b2b84350938f19a938955b8aa4c97819165665a8586a6f7a23c4.js.gz" media="all"></script>
+  <![endif]-->
+
+  <script></script>
+
+  <link rel="stylesheet" media="all" href="https://assets.interviewbit.com/assets/web/application-4f87625701622019f865f8a2bad1e01ff8096e73ee5b33d0275b9763729ee3c4.css.gz" />
+  <link rel="stylesheet" media="all" href="https://assets.interviewbit.com/assets/web/topics-8e1d0fc1713baa3945e3523356b91520f60a392f2e978c0b9c86f2bdf992889d.css.gz" />
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="0Qtd5Os1+rR5DtJQNcZ8hOH/lcF5cfD+BxCNPfyz8R+LmvbDHnAZaaeULJanroPpCIjpy0NsTG8vfL0S+jh9Ng==" />
+    <script>
+  var domain = 'interviewbit.com';
+  if (domain.indexOf('www.') !== 0) {
+    domain = 'www.' + domain;
+  }
+
+  if (0 === document.location.href.indexOf("https://")) {
+    domain = "https://" + domain + "/";
+    if (0 !== document.location.href.indexOf(domain)) {
+      var newLocation = document.location.href.replace(/https:\/\/[^\/]+\//, domain);
+
+      if (newLocation !== document.location.href) {
+        document.location.replace(newLocation);
+      }
+    }
+  } else {
+    domain = "http://" + domain + "/";
+    if (0 != document.location.href.indexOf(domain)) {
+      var newLocation = document.location.href.replace(/http:\/\/[^\/]+\//, domain);
+
+      if(newLocation !== document.location.href) {
+        document.location.replace(newLocation);
+      }
+    }
+  }
+  </script>
+
+  <script>
+  window.ENV_VARS = {
+    mode: "production",
+    application: JSON.parse('{"env_id":"interviewbit","env_site_name":"InterviewBit","env_site_nick":"InterviewBit","env_domain":"interviewbit.com","env_base_url":"https://www.interviewbit.com","env_from_mailer":"info@interviewbit.com","env_reply_to_mailer":"info@interviewbit.com","env_support_mailer":"support@interviewbit.com","env_hello_mailer":"hello@interviewbit.com","env_calendar_organiser":"info@interviewbit.com","env_webpush_manifest":"/gcm-manifest-ib.json"}'),
+    config: JSON.parse('{"speed_test_enabled":true,"seasonal_theme_mode":"none"}')
+  };
+</script>
+  
+
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NMKZTRG');
+    </script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      var gtmData = [];
+
+      gtmData.forEach(function(ele) {
+        window.dataLayer.push(ele);
+      });
+    </script>
+
+
+</head>
+<body>
+
+    
+<nav class="navbar navbar-inverse mit-header navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/" style="padding:10px 5px;">
+        <img style="height:25px;" alt="InterviewBit logo" src="https://assets.interviewbit.com/assets/ib_logo_svg-c7ed205b9475b598a9f652d7045054fa26b491fa95cf098569fa41ee0ac34259.svg.gz" />
+      </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav features">
+          <li id="academy_feature" class="feature ">
+            <a
+              href="https://www.scaler.com/academy/?utm_source=ib&utm_medium=headermenu&utm_campaign=/courses/programming/topics/time-complexity"
+              onclick="ga('send', 'event', 'scaler-academy', 'redirect', 'ib-header')"
+            >
+              <span class="user-score header-items" style="margin-right: 20px">Scaler Academy
+                <span class="badge" style="font-size: 8px; position: absolute; top: -8px; right: -35px; color: black; border: 1px solid darkorange; background-color: gold;">New</span>
+              </span>
+            </a>
+          </li>
+          <li id="practice_feature" class="feature ">
+            <a href="/practice/" >
+              <span class="user-score header-items">Practice</span>
+            </a>
+          </li>
+
+          <!--<li class="dropdown feature" id="more_feature">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <span class="user-score header-items">More</span>
+              <span class="caret" style="margin-bottom: 5px;"></span>
+            </a>
+
+            <ul class="dropdown-menu">-->
+              <li id="referral_feature" class="feature ">
+                <a href="/referrals/" >
+                  <span class="user-score header-items">Referrals</span>
+                </a>
+              </li>
+              <li id="contest_feature" class="feature ">
+                <a href="/contests/" >
+                  <span class="user-score header-items">Contests</span>
+                </a>
+              </li>
+
+          <!-- </ul>
+          </li>-->
+      </ul>
+      <div class="nav navbar-nav hidden-xs hidden-sm hidden-md">
+          <div class="navbar-form form-group pull-left" role="search">
+            <form action="/search/" accept-charset="UTF-8" method="get">
+              <div class="input-group search_bar">
+              <select class="multi-keyword-search form-control" style="width:300px;" name="q[]"></select>
+              <span class="input-group-btn">
+              <button class="btn btn-default search_btn" type="submit">
+              <span class="glyphicon glyphicon-search"></span>
+              </button>
+              </span>
+              </div>
+</form>          </div>
+      </div>
+      <ul class="nav navbar-nav navbar-right" id='welcome-page-nav' >
+      </ul>
+    </div>
+    <!--/.nav-collapse -->
+  </div>
+</nav>
+<style>
+  .navbar {
+    margin: 0;
+  }
+  .ribbon-banner {
+    position: relative;
+    background-color: #2793ff;
+    color: #ffffff;
+    padding: 0.5rem;
+    display: none;
+  }
+  .ribbon-banner.codex {
+    background-color: #021028;
+  }
+  .ribbon-banner.codex b {
+    color: #ffb52b;
+  }
+  .ribbon-banner p {
+    margin: 0;
+  }
+  .ribbon-banner.sat {
+    background-color: #d1ecff;
+    color: #506b6a;
+  }
+  .ribbon-banner.sat b {
+    font-weight: bold;
+    color: inherit;
+  }
+  .ribbon-banner.sat span {
+    color: #ffb52b;
+    font-weight: bold;
+  }
+  .ribbon-banner.sat .ribbon-banner__brand-icon {
+    width: auto;
+    height: 3.5rem;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner.sat .ribbon-banner__brand-icon {
+      height: 4.5rem;
+    }
+  }
+  .ribbon-banner.sat .ribbon-banner__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner.sat .ribbon-banner__container {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+    }
+  }
+  .ribbon-banner.sat .ribbon-banner__event-type {
+    margin-bottom: 1rem;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner.sat .ribbon-banner__event-type {
+      margin-bottom: 0;
+    }
+  }
+  .ribbon-banner.sat .ribbon-banner__title, .ribbon-banner.sat .ribbon-banner__event-description, .ribbon-banner.sat .ribbon-banner__content {
+    margin: 0;
+    text-align: center;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner.sat .ribbon-banner__title, .ribbon-banner.sat .ribbon-banner__event-description, .ribbon-banner.sat .ribbon-banner__content {
+      text-align: left;
+    }
+  }
+  .ribbon-banner.sat .ribbon-banner__divider {
+    background-color: #f1f3f3;
+  }
+  .ribbon-banner.sat .ribbon-banner__action {
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    background: #e21032;
+    color: #f1f3f3;
+    border-radius: 0.5rem;
+  }
+  .ribbon-banner.sat .ribbon-banner__action:hover, .ribbon-banner.sat .ribbon-banner__action:focus {
+    color: #f1f3f3;
+    text-decoration: none;
+    outline: none;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner.sat .ribbon-banner__event-type {
+      max-width: 14rem;
+    }
+    .ribbon-banner.sat .ribbon-banner__content {
+      margin-left: 13rem;
+    }
+  }
+  .ribbon-banner.free_academy {
+    background-color: #021028;
+    padding-bottom: 2rem;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner.free_academy {
+      padding-bottom: 0.5rem;
+    }
+  }
+  .ribbon-banner.free_academy .ribbon-banner__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner.free_academy .ribbon-banner__container {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+    }
+  }
+  .ribbon-banner.free_academy .ribbon-banner__brand-icon {
+    width: 9rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner.free_academy .ribbon-banner__brand-icon {
+      margin-right: 2rem;
+    }
+  }
+  .ribbon-banner.free_academy .ribbon-banner__event-type-icon {
+    display: none;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner.free_academy .ribbon-banner__event-type-icon {
+      display: block;
+      margin: 0;
+      width: 8rem;
+      height: 7.6rem;
+    }
+  }
+  .ribbon-banner.free_academy .ribbon-banner__event-type-text {
+    color: #021028;
+    margin-bottom: 1rem;
+    font-style: inherit;
+    line-height: 2.6rem;
+  }
+  .ribbon-banner.free_academy .ribbon-banner__event-type-text span {
+    background: #ffffff;
+    padding: 0 0.5rem;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner.free_academy .ribbon-banner__event-type-text span {
+      -webkit-box-decoration-break: clone;
+              box-decoration-break: clone;
+    }
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner.free_academy .ribbon-banner__event-type-text {
+      width: 13rem;
+      margin: 0;
+    }
+  }
+  .ribbon-banner.free_academy .ribbon-banner__content {
+    text-align: center;
+    margin: 0;
+  }
+  .ribbon-banner.free_academy .ribbon-banner__event-description {
+    overflow: visible;
+    text-overflow: initial;
+    -webkit-line-clamp: inherit;
+    margin: 0;
+  }
+  .ribbon-banner.free_academy .ribbon-banner__event-description p {
+    margin-bottom: 1.5rem;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner.free_academy .ribbon-banner__event-description p {
+      margin-bottom: 0.3rem;
+    }
+  }
+  .ribbon-banner.free_academy .ribbon-banner__event-description span {
+    color: #ffb52b;
+  }
+  .ribbon-banner.free_academy .ribbon-banner__divider {
+    display: none;
+  }
+  .ribbon-banner.free_academy .ribbon-banner__action-container {
+    padding: 0;
+  }
+  .ribbon-banner.free_academy .ribbon-banner__action {
+    padding: 0.8rem 2.8rem;
+    color: #ffffff;
+    background-color: #e21032;
+    border-radius: 0.5rem;
+  }
+  .ribbon-banner.free_academy .ribbon-banner__action:hover {
+    text-decoration: none;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner.free_academy .ribbon-banner__content {
+      text-align: left;
+      margin-left: 4rem;
+    }
+    .ribbon-banner.free_academy .ribbon-banner__event-type {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      margin: 0;
+      padding-left: 3rem;
+      position: relative;
+    }
+    .ribbon-banner.free_academy .ribbon-banner__event-type:before {
+      content: '';
+      display: block;
+      width: 0.2rem;
+      height: 4rem;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%);
+      border-radius: 0.5rem;
+      background-color: #ffffff;
+    }
+  }
+  .ribbon-banner__body {
+    max-width: 128rem;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner__body {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+    }
+  }
+  .ribbon-banner--hidden {
+    display: none;
+  }
+  .ribbon-banner__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner__container {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      margin: 0 2rem;
+    }
+  }
+  .ribbon-banner__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    margin-right: 0.5rem;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner__title {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      margin: 0;
+    }
+  }
+  .ribbon-banner__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-left: 0.5rem;
+    margin-right: 3rem;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner__content {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin: 0;
+    }
+  }
+  .ribbon-banner__brand-icon {
+    width: 11.4rem;
+    height: 5rem;
+    margin: 1rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 0.8rem;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner__brand-icon {
+      margin: 0.5rem;
+    }
+  }
+  .ribbon-banner__event-type {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner__event-type {
+      margin-left: 2rem;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: row-reverse;
+              flex-direction: row-reverse;
+    }
+  }
+  .ribbon-banner__event-type-icon {
+    width: 4.2rem;
+    margin: 0.5rem;
+  }
+  .ribbon-banner__event-type-text {
+    font-size: 1.6rem;
+  }
+  .ribbon-banner__event-description {
+    font-size: 1.6rem;
+    margin: 0.5rem;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner__event-description {
+      margin: 0 2rem 0 5rem;
+    }
+  }
+  .ribbon-banner__event-timer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 1rem 0.5rem 0;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner__event-timer {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin: 0;
+    }
+  }
+  .ribbon-banner__event-timer-message {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner__event-timer-message {
+      margin: 0 1rem;
+    }
+  }
+  .ribbon-banner__clock-icon {
+    width: 2.4;
+    margin-right: 0.5rem;
+  }
+  .ribbon-banner__timer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0.5rem;
+  }
+  .ribbon-banner__timer-digit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #ffffff;
+    color: #db0019;
+    padding: 0.1rem 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    border-radius: 0.8rem;
+  }
+  .ribbon-banner__divider {
+    background-color: white;
+    height: 0.17rem;
+    border: none;
+    width: 95%;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner__divider {
+      display: none;
+    }
+  }
+  .ribbon-banner__action-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0.5rem 0;
+  }
+  .ribbon-banner__action {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .ribbon-banner__close-action {
+    width: 2.2rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+  }
+  @media screen and (min-width: 769px) {
+    .ribbon-banner__close-action {
+      margin: 0 1rem;
+      padding: 0.5rem;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+  }
+  .ribbon-banner__close-action:hover {
+    background-color: rgba(1, 1, 1, 0.1);
+  }
+</style>
+
+  <div class="ribbon-banner free_academy ib-scaler-banner">
+    <div class="ribbon-banner__body">
+      <div class="ribbon-banner__container">
+        <div class="ribbon-banner__title">
+          <img class="ribbon-banner__brand-icon" src="https://assets.interviewbit.com/assets/interviewbit/png/free_academy-e301973a18534dec20bf1f602490295f7343376eeac7e841aa500171594b0f46.png.gz" alt="ribbon logo">
+          <div class="ribbon-banner__event-type">
+            <img class="ribbon-banner__event-type-icon" src="https://assets.interviewbit.com/assets/ibpp/free_academy_secondary-5f1938078880707a06e9a5e92cbee730c859ee01c2ad41c80c818e87dd2c552b.png.gz" alt="ribbon contest type">
+            <i class="ribbon-banner__event-type-text">
+              <span class="highlight">Free Academy Experience</span>
+            </i>
+          </div>
+        </div>
+        <div class="ribbon-banner__content">
+          <div class="ribbon-banner__event-description">
+            <p><b>Preparing for tech interviews?</b> <br class="visible-xs">Learn from the best instructors in the field.</p><p>Try Academy for <b><span>FREE!</span></b></p>
+          </div>
+
+        </div>
+      </div>
+      <hr class="ribbon-banner__divider">
+      <div class="ribbon-banner__action-container">
+        <a class="ribbon-banner__action" href="https://scaler.com/academy?utm_medium=nudge_modal&amp;utm_campaign=free_academy&amp;utm_source=ib&amp;utm_content=/courses/programming/topics/time-complexity" target="_blank" onclick="window.trackGaEvent('free_academy', 'redirect', 'top_nudge');">
+          Join Now!
+        </a>
+        <img class="ribbon-banner__close-action" src="https://assets.interviewbit.com/assets/ibpp/cross-e653c8d2b9bb254b7742977f4259f9cabf9c5f1b7592153f99ea438f7475ab1d.svg.gz">
+      </div>
+    </div>
+  </div>
+
+
+
+<style>
+  .link {
+    color: #0051fc;
+  }
+
+  #welcome-page-nav {
+    margin-top: 3px;
+  }
+  #welcome-page-nav > li > a {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 10px 5px;
+    background: transparent;
+  }
+  #welcome-page-nav > li > a:hover {
+    color:#69c8c9;
+  }
+
+  .select2-container--open .select2-dropdown--below{
+    width: 324px !important;
+  }
+
+  #welcome-page-nav > li {
+    padding:0px 5px;
+  }
+  #welcome-page-nav > li > a.sign-in-link {
+    border:solid thin;
+    border-radius:5px;
+    padding: 6px 15px;
+    margin-top: 3px;
+  }
+  #welcome-page-nav > li > a.sign-in-link:hover {
+    border-color: #63b1c6;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  #welcome-page-nav > li.looking-to-hire span {
+    font-size: 13px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  @media only screen and (max-width: 500px) {
+    #welcome-page-nav > li.looking-to-hire {
+      border-left: none !important;
+
+    }
+    ul#welcome-page-nav{
+      text-align:center;
+    }
+    ul#welcome-page-nav > li{
+      display: inline-block;
+    }
+  }
+  @media only screen and (max-width: 1440px) {
+    .multi-keyword-search.form-control {
+      width: 150px !important;
+    }
+    .select2.select2-container{
+      width: 150px !important;
+    }
+  }
+  @media screen and (max-width: 1275px) {
+    .looking-to-hire {
+      display: none !important;
+    }
+  }
+</style>
+
+
+
+
+<div class="container global_notice hide" id="ask_for_notification_permissions_flash">
+  <div class="col-xs-12">
+    <div class="alert alert-warning alert-dismissible" role="alert">
+      <button id="notification_flash_close" type="button" class="close ga-event-tracking" data-eventaction="enable_push_notification_close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      Be the first one to know about full time and internship opportunities on InterviewBit.
+      <button class="btn btn-default pull-right ga-event-tracking" data-eventaction="enable_push_notification" id="enable_push_notification">Enable Notifications</button>
+    </div>
+  </div>
+</div>
+
+<div class="container"  id="javascript_not_loaded">
+  <img src="https://assets.interviewbit.com/assets/js-not-loaded-359f325ef56f2648b74fd3258140adaa1f13b17db88a7e6aae71eab6efced5e6.png.gz" class="img-responsive"/>
+</div>
+
+
+
+
+
+
+<div class="container">
+  <div class="col-xs-12">
+  
+<style>
+#codersbit-banner{
+    position: relative;
+}
+.codersbit-banner__img{
+    background-color: #1c3866;
+    max-width: 100%;
+    margin-bottom:10px;
+}
+.codersbit-banner__info{
+    top: 20px;
+    left: 170px;
+    position:absolute;
+    color: white;
+    width: 50%;
+}
+
+.codersbit-banner__info h2, .codersbit-banner__info h5{
+    color: white;
+}
+
+.vertical-banner .codersbit-banner__info{
+    top: 174px;
+    left: 20px;
+    position: absolute;
+    color: white;
+    width: 160px;
+
+}
+.vertical-banner .codersbit-banner__register-btn{
+    width: 120px;
+    margin-top: 10px;
+}
+
+.codersbit-banner__logo{
+    position: absolute;
+    width: 120px;
+    left: 15px;
+}
+.codersbit-banner__register-btn{
+    width: 150px;
+    background-color: rgb(246, 157, 10);
+    display: inline-block;
+    text-align: center;
+    color: white;
+    padding: 6px;
+}
+
+
+
+
+
+@media only screen and (max-width: 1200px){
+    .codersbit-banner__info{
+        width: 250px;
+    }
+    h2 {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+    #codersbit-banner{
+        background-color: #1d3865;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+  .codersbit-banner__logo{
+        position: absolute;
+        width: 100px;
+        left: 15px;
+    }
+
+    .codersbit-banner__info{
+        top: 20px;
+        left: 150px;
+        position:absolute;
+        color: white;
+    }
+    #codersbit-banner{
+        background-color: #1d3865;
+    }
+    .codersbit-banner__register-btn{
+        margin-top: 15px;
+    }
+}
+</style>
+    <div class="row">
+      <div class="blog-main">
+        <ol class="breadcrumb" style="margin-bottom: 20px;">
+          <li><a href="/courses/">Courses</a></li>
+          <li><a href="/courses/programming/">Programming</a></li>
+      <li class="active">Time Complexity</li>
+</ol>
+
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 ">
+                <div class="row">
+  <div class="col-md-12 topic-wrapper">
+    <div class="panel panel-default topic-ct">
+      <div class="panel-heading">
+        <div class="pull-right">
+          <a href="#problems" class="btn btn-primary outline" style="padding: 7px 20px">Go To Problems
+            <span class="caret"></span>
+          </a>
+        </div>
+        <h3 class="panel-secondary-title">Level 1</h3>
+        <h1 class="panel-title">Time Complexity</h1>
+        <div class="clearfix"></div>
+      </div>
+      <div class="panel-body gray">
+        <div class="article">
+            <div class="tutorial-content">
+              <h3 class="panel-secondary-title">
+                Important tutorials
+              </h3>
+                <div class="panel panel-default aligning">
+                  <div class="panel-heading tutorial-heading">
+                    <div class="slide-title" >
+                      1. Time Complexity Of A Computer Program
+                    </div>
+                    <a href="/tutorial/time-complexity-of-a-computer-program/" class="btn btn-default outline text pull-right ">
+                      View Tutorial
+                    </a>
+                  </div>
+                </div>
+                <div class="panel panel-default aligning">
+                  <div class="panel-heading tutorial-heading">
+                    <div class="slide-title" >
+                      2. How To Calculate Running Time?
+                    </div>
+                    <a href="/tutorial/how-to-calculate-running-time/" class="btn btn-default outline text pull-right ">
+                      View Tutorial
+                    </a>
+                  </div>
+                </div>
+                <div class="panel panel-default aligning">
+                  <div class="panel-heading tutorial-heading">
+                    <div class="slide-title" >
+                      3. Asymptotic Notations
+                    </div>
+                    <a href="/tutorial/asymptotic-notations/" class="btn btn-default outline text pull-right ">
+                      View Tutorial
+                    </a>
+                  </div>
+                </div>
+                <div class="panel panel-default aligning">
+                  <div class="panel-heading tutorial-heading">
+                    <div class="slide-title" >
+                      4. Some General Rules
+                    </div>
+                    <a href="/tutorial/some-general-rules/" class="btn btn-default outline text pull-right ">
+                      View Tutorial
+                    </a>
+                  </div>
+                </div>
+                <div class="panel panel-default aligning">
+                  <div class="panel-heading tutorial-heading">
+                    <div class="slide-title" >
+                      5. Space Complexity
+                    </div>
+                    <a href="/tutorial/space-complexity/" class="btn btn-default outline text pull-right ">
+                      View Tutorial
+                    </a>
+                  </div>
+                </div>
+                <div class="panel panel-default aligning">
+                  <div class="panel-heading tutorial-heading">
+                    <div class="slide-title" >
+                      6. Relevance Of Time Complexity
+                    </div>
+                    <a href="/tutorial/relevance-of-time-complexity/" class="btn btn-default outline text pull-right ">
+                      View Tutorial
+                    </a>
+                  </div>
+                </div>
+            </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+                <div class="jumbotron mcq-banner">
+                  <span class="glyphicon glyphicon-remove remove"></span>
+                  <h2>This topic has only Multiple Choice Questions</h2>
+                  <div class="subtext"> Jump to subsequent topics to solve code problems.</div>
+                </div>
+        </div>
+    </div>
+
+
+
+          <div id="problems" class="panel panel-default topic-ct">
+    <div class="panel-heading">
+      <h2 class="panel-title">Time Complexity Problems</h2>
+    </div>
+
+  <div class="panel-body gray">
+
+      <div class="col-sm-6 left-col">
+            <div>
+              <div class="panel assignment-list panel-default"  id="bucket_130">
+                <div class="panel-heading">
+                  <span>Basic primer</span>
+                    <span class="glyphicon pull-right glyphicon-info glyphicon-info-sign"
+                      data-toggle="tooltip" data-placement="top"
+                      title="We group together similar problem into buckets. Solving ANY problem from the bucket marks it as completed.
+                      Completing all the buckets will mark the topic as solved."></span>
+                </div>
+                <div class="collapse in" id="bucket-130">
+                  <table class="table">
+                    <thead>
+                    <tr>
+                      <th>Problem</th>
+                      <th>Score</th>
+                      <th>Companies</th>
+                      <th>Time</th>
+                      <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="problem_250">
+                          <td>
+                            <a class="locked problem_title" data-defer-access="true"
+                               data-warn-msg="Average time taken to solve this problem is &lt;span class=&#39;time-to-solve&#39;&gt;2&lt;/span&gt; minutes. The quicker you solve the problem, the higher the score. Ready to start?&lt;br /&gt;&lt;br /&gt; "
+                               href="/problems/loopcmpl/">LOOP_CMPL
+                            </a>
+                          </td>
+                          <td class="problem_score">
+                            20
+                          </td>
+                          <td>
+                            <div class="tag-container">
+                              <span class="problem-tags">
+                                
+                              </span>
+                            </div>
+                          </td>
+                          <td style="white-space: nowrap" class="time_to_solve">
+                            2:43
+
+                          </td>
+                          <td class="problem_status">
+                          </td>
+                        </tr>
+                        <tr id="problem_251">
+                          <td>
+                            <a class="locked problem_title" data-defer-access="true"
+                               data-warn-msg="Average time taken to solve this problem is &lt;span class=&#39;time-to-solve&#39;&gt;1&lt;/span&gt; minutes. The quicker you solve the problem, the higher the score. Ready to start?&lt;br /&gt;&lt;br /&gt; "
+                               href="/problems/nestedcmpl/">NESTED_CMPL
+                            </a>
+                          </td>
+                          <td class="problem_score">
+                            20
+                          </td>
+                          <td>
+                            <div class="tag-container">
+                              <span class="problem-tags">
+                                
+                              </span>
+                            </div>
+                          </td>
+                          <td style="white-space: nowrap" class="time_to_solve">
+                            1:10
+
+                          </td>
+                          <td class="problem_status">
+                          </td>
+                        </tr>
+                        <tr id="problem_240">
+                          <td>
+                            <a class="locked problem_title" data-defer-access="true"
+                               data-warn-msg="Average time taken to solve this problem is &lt;span class=&#39;time-to-solve&#39;&gt;1&lt;/span&gt; minutes. The quicker you solve the problem, the higher the score. Ready to start?&lt;br /&gt;&lt;br /&gt; "
+                               href="/problems/nestedcmpl2/">NESTED_CMPL2
+                            </a>
+                          </td>
+                          <td class="problem_score">
+                            30
+                          </td>
+                          <td>
+                            <div class="tag-container">
+                              <span class="problem-tags">
+                                
+                              </span>
+                            </div>
+                          </td>
+                          <td style="white-space: nowrap" class="time_to_solve">
+                            1:25
+
+                          </td>
+                          <td class="problem_status">
+                          </td>
+                        </tr>
+                        <tr id="problem_243">
+                          <td>
+                            <a class="locked problem_title" data-defer-access="true"
+                               data-warn-msg="Average time taken to solve this problem is &lt;span class=&#39;time-to-solve&#39;&gt;0&lt;/span&gt; minutes. The quicker you solve the problem, the higher the score. Ready to start?&lt;br /&gt;&lt;br /&gt; "
+                               href="/problems/choose4/">CHOOSE4
+                            </a>
+                          </td>
+                          <td class="problem_score">
+                            50
+                          </td>
+                          <td>
+                            <div class="tag-container">
+                              <span class="problem-tags">
+                                
+                              </span>
+                            </div>
+                          </td>
+                          <td style="white-space: nowrap" class="time_to_solve">
+                            0:57
+
+                          </td>
+                          <td class="problem_status">
+                          </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="panel assignment-list panel-default"  id="bucket_131">
+                <div class="panel-heading">
+                  <span>Math</span>
+                    <span class="glyphicon pull-right glyphicon-info glyphicon-info-sign"
+                      data-toggle="tooltip" data-placement="top"
+                      title="We group together similar problem into buckets. Solving ANY problem from the bucket marks it as completed.
+                      Completing all the buckets will mark the topic as solved."></span>
+                </div>
+                <div class="collapse in" id="bucket-131">
+                  <table class="table">
+                    <thead>
+                    <tr>
+                      <th>Problem</th>
+                      <th>Score</th>
+                      <th>Companies</th>
+                      <th>Time</th>
+                      <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="problem_248">
+                          <td>
+                            <a class="locked problem_title" data-defer-access="true"
+                               data-warn-msg="Average time taken to solve this problem is &lt;span class=&#39;time-to-solve&#39;&gt;1&lt;/span&gt; minutes. The quicker you solve the problem, the higher the score. Ready to start?&lt;br /&gt;&lt;br /&gt; "
+                               href="/problems/whilecmpl/">WHILE_CMPL
+                            </a>
+                          </td>
+                          <td class="problem_score">
+                            50
+                          </td>
+                          <td>
+                            <div class="tag-container">
+                              <span class="problem-tags">
+                                
+                              </span>
+                            </div>
+                          </td>
+                          <td style="white-space: nowrap" class="time_to_solve">
+                            1:31
+
+                          </td>
+                          <td class="problem_status">
+                          </td>
+                        </tr>
+                        <tr id="problem_242">
+                          <td>
+                            <a class="locked problem_title" data-defer-access="true"
+                               data-warn-msg="Average time taken to solve this problem is &lt;span class=&#39;time-to-solve&#39;&gt;3&lt;/span&gt; minutes. The quicker you solve the problem, the higher the score. Ready to start?&lt;br /&gt;&lt;br /&gt; "
+                               href="/problems/nestedcmpl3/">NESTED_CMPL3
+                            </a>
+                          </td>
+                          <td class="problem_score">
+                            80
+                          </td>
+                          <td>
+                            <div class="tag-container">
+                              <span class="problem-tags">
+                                
+                              </span>
+                            </div>
+                          </td>
+                          <td style="white-space: nowrap" class="time_to_solve">
+                            3:56
+
+                          </td>
+                          <td class="problem_status">
+                          </td>
+                        </tr>
+                        <tr id="problem_247">
+                          <td>
+                            <a class="locked problem_title" data-defer-access="true"
+                               data-warn-msg="Average time taken to solve this problem is &lt;span class=&#39;time-to-solve&#39;&gt;2&lt;/span&gt; minutes. The quicker you solve the problem, the higher the score. Ready to start?&lt;br /&gt;&lt;br /&gt; "
+                               href="/problems/loopcmpl2/">LOOP_CMPL2
+                            </a>
+                          </td>
+                          <td class="problem_score">
+                            80
+                          </td>
+                          <td>
+                            <div class="tag-container">
+                              <span class="problem-tags">
+                                
+                              </span>
+                            </div>
+                          </td>
+                          <td style="white-space: nowrap" class="time_to_solve">
+                            2:43
+
+                          </td>
+                          <td class="problem_status">
+                          </td>
+                        </tr>
+                        <tr id="problem_246">
+                          <td>
+                            <a class="locked problem_title" data-defer-access="true"
+                               data-warn-msg="Average time taken to solve this problem is &lt;span class=&#39;time-to-solve&#39;&gt;4&lt;/span&gt; minutes. The quicker you solve the problem, the higher the score. Ready to start?&lt;br /&gt;&lt;br /&gt; "
+                               href="/problems/gcdcmpl/">GCD_CMPL
+                            </a>
+                          </td>
+                          <td class="problem_score">
+                            150
+                          </td>
+                          <td>
+                            <div class="tag-container">
+                              <span class="problem-tags">
+                                
+                              </span>
+                            </div>
+                          </td>
+                          <td style="white-space: nowrap" class="time_to_solve">
+                            4:13
+
+                          </td>
+                          <td class="problem_status">
+                          </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="panel assignment-list panel-default"  id="bucket_132">
+                <div class="panel-heading">
+                  <span>Compare functions</span>
+                    <span class="glyphicon pull-right glyphicon-info glyphicon-info-sign"
+                      data-toggle="tooltip" data-placement="top"
+                      title="We group together similar problem into buckets. Solving ANY problem from the bucket marks it as completed.
+                      Completing all the buckets will mark the topic as solved."></span>
+                </div>
+                <div class="collapse in" id="bucket-132">
+                  <table class="table">
+                    <thead>
+                    <tr>
+                      <th>Problem</th>
+                      <th>Score</th>
+                      <th>Companies</th>
+                      <th>Time</th>
+                      <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="problem_241">
+                          <td>
+                            <a class="locked problem_title" data-defer-access="true"
+                               data-warn-msg="Average time taken to solve this problem is &lt;span class=&#39;time-to-solve&#39;&gt;1&lt;/span&gt; minutes. The quicker you solve the problem, the higher the score. Ready to start?&lt;br /&gt;&lt;br /&gt; "
+                               href="/problems/choose3/">CHOOSE3
+                            </a>
+                          </td>
+                          <td class="problem_score">
+                            50
+                          </td>
+                          <td>
+                            <div class="tag-container">
+                              <span class="problem-tags">
+                                
+                              </span>
+                            </div>
+                          </td>
+                          <td style="white-space: nowrap" class="time_to_solve">
+                            1:39
+
+                          </td>
+                          <td class="problem_status">
+                          </td>
+                        </tr>
+                        <tr id="problem_249">
+                          <td>
+                            <a class="locked problem_title" data-defer-access="true"
+                               data-warn-msg="Average time taken to solve this problem is &lt;span class=&#39;time-to-solve&#39;&gt;1&lt;/span&gt; minutes. The quicker you solve the problem, the higher the score. Ready to start?&lt;br /&gt;&lt;br /&gt; "
+                               href="/problems/choose1/">CHOOSE1
+                            </a>
+                          </td>
+                          <td class="problem_score">
+                            50
+                          </td>
+                          <td>
+                            <div class="tag-container">
+                              <span class="problem-tags">
+                                
+                              </span>
+                            </div>
+                          </td>
+                          <td style="white-space: nowrap" class="time_to_solve">
+                            1:43
+
+                          </td>
+                          <td class="problem_status">
+                          </td>
+                        </tr>
+                        <tr id="problem_245">
+                          <td>
+                            <a class="locked problem_title" data-defer-access="true"
+                               data-warn-msg="Average time taken to solve this problem is &lt;span class=&#39;time-to-solve&#39;&gt;2&lt;/span&gt; minutes. The quicker you solve the problem, the higher the score. Ready to start?&lt;br /&gt;&lt;br /&gt; "
+                               href="/problems/choose2/">CHOOSE2
+                            </a>
+                          </td>
+                          <td class="problem_score">
+                            80
+                          </td>
+                          <td>
+                            <div class="tag-container">
+                              <span class="problem-tags">
+                                
+                              </span>
+                            </div>
+                          </td>
+                          <td style="white-space: nowrap" class="time_to_solve">
+                            2:23
+
+                          </td>
+                          <td class="problem_status">
+                          </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+      </div>
+      <div class="col-sm-6 right-col">
+            <div>
+              <div class="panel assignment-list panel-default"  id="bucket_144">
+                <div class="panel-heading">
+                  <span>Function calling itself</span>
+                    <span class="glyphicon pull-right glyphicon-info glyphicon-info-sign"
+                      data-toggle="tooltip" data-placement="top"
+                      title="We group together similar problem into buckets. Solving ANY problem from the bucket marks it as completed.
+                      Completing all the buckets will mark the topic as solved."></span>
+                </div>
+                <div class="collapse in" id="bucket-144">
+                  <table class="table">
+                    <thead>
+                    <tr>
+                      <th>Problem</th>
+                      <th>Score</th>
+                      <th>Companies</th>
+                      <th>Time</th>
+                      <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="problem_285">
+                          <td>
+                            <a class="locked problem_title" data-defer-access="true"
+                               data-warn-msg="Average time taken to solve this problem is &lt;span class=&#39;time-to-solve&#39;&gt;6&lt;/span&gt; minutes. The quicker you solve the problem, the higher the score. Ready to start?&lt;br /&gt;&lt;br /&gt; "
+                               href="/problems/reccmpl1/">REC_CMPL1
+                            </a>
+                          </td>
+                          <td class="problem_score">
+                            80
+                          </td>
+                          <td>
+                            <div class="tag-container">
+                              <span class="problem-tags">
+                                
+                              </span>
+                            </div>
+                          </td>
+                          <td style="white-space: nowrap" class="time_to_solve">
+                            6:58
+
+                          </td>
+                          <td class="problem_status">
+                          </td>
+                        </tr>
+                        <tr id="problem_286">
+                          <td>
+                            <a class="locked problem_title" data-defer-access="true"
+                               data-warn-msg="Average time taken to solve this problem is &lt;span class=&#39;time-to-solve&#39;&gt;6&lt;/span&gt; minutes. The quicker you solve the problem, the higher the score. Ready to start?&lt;br /&gt;&lt;br /&gt; "
+                               href="/problems/reccmpl2/">REC_CMPL2
+                            </a>
+                          </td>
+                          <td class="problem_score">
+                            80
+                          </td>
+                          <td>
+                            <div class="tag-container">
+                              <span class="problem-tags">
+                                
+                              </span>
+                            </div>
+                          </td>
+                          <td style="white-space: nowrap" class="time_to_solve">
+                            6:25
+
+                          </td>
+                          <td class="problem_status">
+                          </td>
+                        </tr>
+                        <tr id="problem_287">
+                          <td>
+                            <a class="locked problem_title" data-defer-access="true"
+                               data-warn-msg="Average time taken to solve this problem is &lt;span class=&#39;time-to-solve&#39;&gt;4&lt;/span&gt; minutes. The quicker you solve the problem, the higher the score. Ready to start?&lt;br /&gt;&lt;br /&gt; "
+                               href="/problems/reccmpl3/">REC_CMPL3
+                            </a>
+                          </td>
+                          <td class="problem_score">
+                            150
+                          </td>
+                          <td>
+                            <div class="tag-container">
+                              <span class="problem-tags">
+                                
+                              </span>
+                            </div>
+                          </td>
+                          <td style="white-space: nowrap" class="time_to_solve">
+                            4:39
+
+                          </td>
+                          <td class="problem_status">
+                          </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="panel assignment-list panel-default"  id="bucket_133">
+                <div class="panel-heading">
+                  <span>Amortized complexity</span>
+                    <span class="glyphicon pull-right glyphicon-info glyphicon-info-sign"
+                      data-toggle="tooltip" data-placement="top"
+                      title="We group together similar problem into buckets. Solving ANY problem from the bucket marks it as completed.
+                      Completing all the buckets will mark the topic as solved."></span>
+                </div>
+                <div class="collapse in" id="bucket-133">
+                  <table class="table">
+                    <thead>
+                    <tr>
+                      <th>Problem</th>
+                      <th>Score</th>
+                      <th>Companies</th>
+                      <th>Time</th>
+                      <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="problem_244">
+                          <td>
+                            <a class="locked problem_title" data-defer-access="true"
+                               data-warn-msg="Average time taken to solve this problem is &lt;span class=&#39;time-to-solve&#39;&gt;3&lt;/span&gt; minutes. The quicker you solve the problem, the higher the score. Ready to start?&lt;br /&gt;&lt;br /&gt; "
+                               href="/problems/amortized1/">AMORTIZED1
+                            </a>
+                          </td>
+                          <td class="problem_score">
+                            100
+                          </td>
+                          <td>
+                            <div class="tag-container">
+                              <span class="problem-tags">
+                                
+                              </span>
+                            </div>
+                          </td>
+                          <td style="white-space: nowrap" class="time_to_solve">
+                            3:03
+
+                          </td>
+                          <td class="problem_status">
+                          </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+      </div>
+</div>
+</div>
+    
+    <div id="summary">
+    </div>
+  </div>
+</div>
+
+
+  
+<section id="footer" class="section">
+  <div class="container">
+    <div class="row text-center" id="footer-pages">
+      <ul class="list-inline">
+        <li><a href="https://blog.interviewbit.com" target="_blank">Blog</a></li>
+        <li><a href="/pages/about_us/">About Us</a></li>
+        <li><a href="/pages/faq/">FAQ</a></li>
+        <li><a href="/pages/contact_us/">Contact Us</a></li>
+        <li><a href="/pages/terms/">Terms</a></li>
+        <li><a href="/pages/privacy/">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="row text-center" id="footer-pages">
+      <ul class="list-inline">
+        <li><a href="/scaler-academy-review">Scaler Academy Review</a></li>
+        <li><a href="/courses/system-design/">System Design Interview Questions</a></li>
+        <li><a href="/google-interview-questions/">Google Interview Questions</a></li>
+        <li><a href="/facebook-interview-questions/">Facebook Interview Questions</a></li>
+        <li><a href="/amazon-interview-questions/">Amazon Interview Questions</a></li>
+        <li><a href="/microsoft-interview-questions/">Microsoft Interview Questions</a></li>
+        <li><a href="/sql-interview-questions/">SQL Interview Questions</a></li>
+        <li><a href="/python-interview-questions/">Python Interview Questions</a></li>
+        <li><a href="/javascript-interview-questions/">Javascript Interview Questions</a></li>
+        <li><a href="/mvc-interview-questions/">MVC Interview Questions</a></li>
+        <li><a href="/react-interview-questions/">React Interview Questions</a></li>
+        <li><a href="/jquery-interview-questions/">jQuery Interview Questions</a></li>
+        <li><a href="/angular-interview-questions/">Angular Interview Questions</a></li>
+        <li><a href="/spring-interview-questions/">Spring Interview Questions</a></li>
+        <li><a href="/data-structure-interview-questions/">Data Structure Interview Questions</a></li>
+        <li><a href="/selenium-interview-questions/">Selenium Interview Questions</a></li>
+        <li><a href="/html-interview-questions/">HTML Interview Questions</a></li>
+        <li><a href="/directi-interview-questions/">Directi Interview Questions</a></li>
+        <li><a href="/yahoo-interview-questions/">Yahoo Interview Questions</a></li>
+        <li><a href="/linkedin-interview-questions/">LinkedIn Interview Questions</a></li>
+        <li><a href="/vmware-interview-questions/">VMware Interview Questions</a></li>
+        <li><a href="/ebay-interview-questions/">eBay Interview Questions</a></li>
+        <li><a href="/flipkart-interview-questions/">Flipkart Interview Questions</a></li>
+      </ul>
+    </div>
+    <div class="row text-center" style="margin-top: 10px" id="footer-social">
+        <ul class="list-inline">
+          <li>
+            <a target="_blank" href="https://www.facebook.com/interviewbit">
+              <i class="fa fa-facebook"></i>
+              <span style="padding-left: 8px">Like Us</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://twitter.com/interview_bit">
+              <i class="fa fa-twitter"></i>
+              <span style="padding-left: 8px">Follow Us</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="mailto:hello@interviewbit.com">
+              <i class="fa fa-envelope-o"></i>
+              <span style="padding-left: 8px">Email</span>
+            </a>
+          </li>
+        </ul>
+    </div>
+    <br/>
+    <br/>
+  </div>
+</section>
+
+
+<script type="text/x-template" id="global-modal-template">
+<div class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">Info</h4>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                
+            </div>
+        </div>
+    </div>
+</div>
+</script>
+    
+
+  
+
+
+
+<div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="SignUp">
+  <div class="modal-dialog  user-panel" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="user-screen login-page">
+
+  <div style = "text-align: center;">
+
+	<h2 style = "color: #254870;font-family: Nunito;">Get Started</h2>
+	<p style = "text-transform: uppercase;color: rgba(0, 0, 0, 0.4);font-family: Nunito;font-size:14px;font-weight: bold">
+		Sign Up using
+	</p>
+</div>
+  <div class="oauth-provider-div">
+  <div class="col-xs-12 col-md-4 login-btn-ct">
+    <a href="/users/auth/facebook/" class="btn-oauth">
+      <img src="https://assets.interviewbit.com/assets/jobs/logged_out_referral/fb-oauth-517731fada42c712a42e21bf11e592ed9aaa24d6444e251754a3d828f7b5b28e.png.gz">
+    </a>
+  </div>
+  <div class="col-xs-12 col-md-4 login-btn-ct">
+    <a href="/users/auth/linkedin/" class="btn-oauth">
+      <img src="https://assets.interviewbit.com/assets/jobs/logged_out_referral/ln-oauth-8fa2b2518a2b8c74034e267e3a26c0c808fe6c7f90e7602b8ce823a77ed13f8e.png.gz">
+    </a>
+  </div>
+  <div class="col-xs-12 col-md-4 login-btn-ct">
+    <a href="/users/auth/github/" class="btn-oauth">
+      <img src="https://assets.interviewbit.com/assets/jobs/logged_out_referral/git-oauth-6e42df27a979324867fb032ee90829f1b437b1452e1656ad8350e1e2999851ba.png.gz">
+    </a>
+  </div>
+  <div class="col-xs-12 col-md-4 login-btn-ct">
+    <a href="/users/auth/google_oauth2/" class="btn-oauth">
+      <img src="https://assets.interviewbit.com/assets/jobs/logged_out_referral/google-oauth-24cba186e53a1c30ef682062820af75fb8fb0814bd1d6ef1c448e888dfe39323.png.gz">
+    </a>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="or-container">
+  <hr class="or-hr">
+  <div class="or">or</div>
+</div>
+
+  <!-- Hack for now -->
+  <div class = "ib-form">
+  <form class="new_user" id="new_user" action="/users/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="aj7+JkaDgLm8bn0D7/GqnfHxAmGlwAA3axIrfS8DPlEwr1UBs8ZjZGL0g8V9mVXwGIZ+a5/dvKZDfhtSKYiyeA==" />
+      <input type="hidden" id="invite_code" name="user[invite_code]" value="">
+      <input type="hidden" id="ref" name="ref" value="">
+      <input type="hidden" id="user_timezone" name="user[timezone]">
+      
+
+      <div class="form-group ib-field">
+        <div class = "ib-field-header">
+          <p class = "ib-label">Full Name <span class = "ib-attention-mark"> *</span></p>
+        </div>
+        <input id="name" name="user[name]" type="text" placeholder="Enter First name and Last Name" required="" title="Enter your Full Name">
+      </div>
+
+      <div class="form-group ib-field">
+        <div class = "ib-field-header">
+          <p class = "ib-label">Email <span class = "ib-attention-mark"> *</span></p>
+        </div>
+        <input id="user_email" name="user[email]" type="email" value="" placeholder="Example@something.com" required="">
+      </div>
+
+      <div class="form-group ib-field">
+        <div class = "ib-field-header">
+          <p class = "ib-label">Password <span class = "ib-attention-mark"> *</span></p>
+        </div>
+        <div class = "password-container">
+          <input autocomplete="off" id="user_password" name="user[password]" type="password" placeholder="Password (8 characters minimum)"
+                 pattern=".{8,}" required=""
+                 title="Password must contain at least 8 characters.">
+          <i class = "glyphicon glyphicon-eye-open password-eye-icon"></i>
+        </div>
+      </div>
+      <div class="form-group ib-field" style="overflow: hidden;">
+          <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<div class="g-recaptcha " data-sitekey="6Lf3ngcTAAAAAAc199lejBXaJ5ZQbLp6MXHoRgWj"></div>
+          <noscript>
+            <div>
+              <div style="width: 302px; height: 422px; position: relative;">
+                <div style="width: 302px; height: 422px; position: absolute;">
+                  <iframe
+                    src="https://www.google.com/recaptcha/api/fallback?k=6Lf3ngcTAAAAAAc199lejBXaJ5ZQbLp6MXHoRgWj"
+                    frameborder="0" scrolling="no"
+                    style="width: 302px; height:422px; border-style: none;">
+                  </iframe>
+                </div>
+              </div>
+              <div style="width: 300px; height: 60px; border-style: none;
+                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                  class="g-recaptcha-response"
+                  style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                  margin: 10px 25px; padding: 0px; resize: none;" value="">
+                </textarea>
+              </div>
+            </div>
+          </noscript>
+
+      </div>
+      <div class = "ib-field">
+        <input name="commit" type="submit" value="Sign Up and Continue" class = "ib-button primary">
+      </div>
+      
+    <br>
+
+    <p style = "text-align: center;color: rgba(0, 0, 0, 0.54);font-style: italic;">
+      By creating an account I  have read and agree to InterviewBit’s
+      <a href="https://www.interviewbit.com/pages/terms/">Terms</a>
+      and
+      <a href="https://www.interviewbit.com/pages/privacy/">Privacy Policy</a>.
+    </p>
+
+      <div class="clearfix"></div>
+</form>  </div>
+  <br/>
+  <div class="sign-up-panel-links">
+    Already an Interviewbit user? <a href="/users/sign_in/">Log in</a>
+  </div>
+  <br/>
+  <br/>
+</div>
+
+<link rel="stylesheet" media="screen" href="https://assets.interviewbit.com/assets/sign_up-e90c816004ff1ba89598d4e7d4fedd53bb59a0a45144bbf4893c9b0071d7fbf3.css.gz" />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="SignIn">
+  <div class="modal-dialog  user-panel" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+<div class="user-screen login-page">
+  <div style = "text-align: center;">
+
+	<h2 style = "color: #254870;font-family: Nunito;">Log in to your account</h2>
+	<p style = "text-transform: uppercase;color: rgba(0, 0, 0, 0.4);font-family: Nunito;font-size:14px;font-weight: bold">
+		Log In using
+	</p>
+</div>
+  <div class="oauth-provider-div">
+  <div class="col-xs-12 col-md-4 login-btn-ct">
+    <a href="/users/auth/facebook/" class="btn-oauth">
+      <img src="https://assets.interviewbit.com/assets/jobs/logged_out_referral/fb-oauth-517731fada42c712a42e21bf11e592ed9aaa24d6444e251754a3d828f7b5b28e.png.gz">
+    </a>
+  </div>
+  <div class="col-xs-12 col-md-4 login-btn-ct">
+    <a href="/users/auth/linkedin/" class="btn-oauth">
+      <img src="https://assets.interviewbit.com/assets/jobs/logged_out_referral/ln-oauth-8fa2b2518a2b8c74034e267e3a26c0c808fe6c7f90e7602b8ce823a77ed13f8e.png.gz">
+    </a>
+  </div>
+  <div class="col-xs-12 col-md-4 login-btn-ct">
+    <a href="/users/auth/github/" class="btn-oauth">
+      <img src="https://assets.interviewbit.com/assets/jobs/logged_out_referral/git-oauth-6e42df27a979324867fb032ee90829f1b437b1452e1656ad8350e1e2999851ba.png.gz">
+    </a>
+  </div>
+  <div class="col-xs-12 col-md-4 login-btn-ct">
+    <a href="/users/auth/google_oauth2/" class="btn-oauth">
+      <img src="https://assets.interviewbit.com/assets/jobs/logged_out_referral/google-oauth-24cba186e53a1c30ef682062820af75fb8fb0814bd1d6ef1c448e888dfe39323.png.gz">
+    </a>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="or-container">
+  <hr class="or-hr">
+  <div class="or">or</div>
+</div>
+
+  <!-- Hack for now -->
+  <div class = "ib-form">
+  <form id="log_in_form" class="new_user" action="/users/sign_in/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="qVXHtaz8wKwlNAzeaGU/YqGeVEJJx523jbZBsuUDxhXzxGySWbkjcfuu8hj6DcAPSOkoSHPaISal2nGd44hKPA==" />
+
+      <div class="form-group ib-field">
+        <div class = "ib-field-header">
+          <p class = "ib-label">Email <span class = "ib-attention-mark"> *</span></p>
+        </div>
+        <input id="user_email_field" name="user[email]" type="email" value="" placeholder="Enter your email">
+      </div>
+
+      <div class="form-group ib-field">
+        <div class = "ib-field-header">
+          <p class = "ib-label">Password <span class = "ib-attention-mark"> *</span></p>
+        </div>
+        <input autocomplete="off" id="user_password_field" name="user[password]" type="password" placeholder="Enter your password">
+      </div>
+
+          <div class="checkbox">
+            <label>
+              <input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" checked>Remember Me
+            </label>
+          </div>
+
+      <div class = "ib-field">
+        <input name="commit" type="submit" value="Login and Continue" class="ib-button primary">
+      </div>
+</form>  </div>
+
+  <br>
+
+  <div class="sign-up-panel-links">
+  <a href="/users/password/new/">Forgot password?</a><br />
+      <a href="/users/confirmation/new/">Didn&#39;t receive confirmation instructions?</a><br />
+  Not an Interviewbit user? <a href="/users/sign_up/">Sign up</a><br />
+  </div>
+  <br/>
+  <br/>
+</div>
+
+<link rel="stylesheet" media="screen" href="https://assets.interviewbit.com/assets/sign_up-e90c816004ff1ba89598d4e7d4fedd53bb59a0a45144bbf4893c9b0071d7fbf3.css.gz" />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="https://assets.interviewbit.com/assets/web/application-770226e7ad68e2e7d5cf0e0b6f29be9ee512373dc6ccb54b9930143159f21210.js.gz" crossorigin="anonymous"></script>
+<script src="https://assets.interviewbit.com/assets/web/topics-f58100416f237d0f04a4aa5e8e767c1b3d4872f1ce50c0e1233b3b57faa5828c.js.gz" crossorigin="anonymous"></script>
+
+    <script>
+        (function () {
+            $(".mcq-banner .remove").click(function(){
+                $(this).parents(".mcq-banner").slideUp();
+                localStorage.setItem("mcq-banner-closed", true);
+            });
+            if(localStorage.getItem("mcq-banner-closed")){
+                $(".mcq-banner").hide();
+            }
+            // Disable google one tap auto Prompt
+            window.googleOneTapConfig = window.googleOneTapConfig || {};
+            window.googleOneTapConfig.disableAutoPropmt = true;
+            $.ajax({
+                url: '/get_user_options/',
+                success: function(resp){
+                    $('#welcome-page-nav').html(resp.header_html);
+                    $('meta[name="csrf-token"]').attr('content', resp.csrf_token);
+                    $('[name="authenticity_token"]').each(function(index, el){
+                        $(el).val(resp.csrf_token);
+                    });
+                    !resp.logged_in && window.googleOneTapConfig.showGooglePrompt();
+
+                    if(resp.logged_in){
+                        $.ajax({
+                            url: '/courses/programming/topics/time-complexity/get_user_progress/',
+                            success: function(resp){
+                                for(var i=0;i<resp.solved_problem_ids.length;i++) {
+                                    var $problem_row = $('#problem_' + resp.solved_problem_ids[i]);
+                                    $('#problem_' + resp.solved_problem_ids[i] + ' .problem_status').html('<span class="glyphicon  glyphicon-success glyphicon-ok" title="Solved"></span>');
+                                    $('#problem_' + resp.solved_problem_ids[i] + ' .problem_title').removeData('defer-access');
+                                    $('#problem_' + resp.solved_problem_ids[i] + ' .problem_title').off('click');
+                                    if (resp.user_problems &&  resp.user_problems[resp.solved_problem_ids[i]] && resp.user_problems[resp.solved_problem_ids[i]].score) {
+                                        $('#problem_' + resp.solved_problem_ids[i] + ' .problem_score').prepend(resp.user_problems[resp.solved_problem_ids[i]].score + '/');
+                                    }
+                                    if (resp.user_problems && resp.user_problems[resp.solved_problem_ids[i]] && resp.user_problems[resp.solved_problem_ids[i]].time_to_solve) {
+                                        var time_to_solve = Math.floor(resp.user_problems[resp.solved_problem_ids[i]].time_to_solve / 60)
+                                        if(time_to_solve > 60){
+                                            time_to_solve = '> 1 hour'
+                                        }
+                                        $('#problem_' + resp.solved_problem_ids[i] + ' .time_to_solve').prepend(time_to_solve + '/');
+                                    }
+
+                                    $("#primer_problem_" + resp.solved_problem_ids[i] + " .panel-body").append('<span class="glyphicon glyphicon-success glyphicon-ok pull-right"></span>');
+                                }
+
+                                for(var i=0;i<resp.started_problem_ids.length;i++){
+                                    $('#problem_' + resp.started_problem_ids[i] + ' .problem_status').html('<span class="glyphicon glyphicon-time" title="In Progress"></span>');
+                                    $('#problem_' + resp.started_problem_ids[i] + ' .problem_title').removeData('defer-access');
+                                    $('#problem_' + resp.started_problem_ids[i] + ' .problem_title').off('click');
+
+                                    $("#primer_problem_" + resp.started_problem_ids[i] + " .panel-body").append('<span class="glyphicon glyphicon-info glyphicon-time pull-right"></span>');
+                                }
+
+                                for(var i=0;i<resp.bookmarked_problem_ids.length;i++){
+                                    $('#problem_' + resp.bookmarked_problem_ids[i] + ' .problem_title').append('<span class="fa fa-star" data-toggle="tooltip" data-placement="top" title="" data-original-title="Bookmarked"></span>');
+                                }
+
+                                for(var bucket_id in resp.bucket_tags){
+                                    var bucket_problems = resp.tag_problems_set[bucket_id];
+                                    var solved_problem_in_bucket = bucket_problems.filter(value => -1 !== resp.solved_problem_ids.indexOf(value));
+                                    if(solved_problem_in_bucket.length){
+                                        $("#bucket_" + bucket_id).addClass('panel-success');
+                                        $("#bucket_" + bucket_id + " .panel-heading .glyphicon").remove();
+                                        $("#bucket_" + bucket_id + " .panel-heading").append('<span class="glyphicon pull-right glyphicon-success glyphicon-ok" data-toggle="tooltip" data-placement="top" title="" data-original-title="This bucket is already complete as you have solved one or more problems from it."></span>')
+                                    }
+                                }
+                                $('[data-toggle="tooltip"]').tooltip();
+
+                            }
+                        });
+                    }
+                    if(resp.logged_in){
+                            $.ajax({
+                                url: '/courses/programming/topics/time-complexity/get_user_nux_tour/',
+                                success: function(resp) {
+                                    if(resp.current_user_nux_tour == 1) {
+                                        myinterviewtrainer.topic.level0_tour.init();
+                                        myinterviewtrainer.topic.level0_tour.start();
+                                    }
+                                    else if(resp.current_user_nux_tour == 2) {
+                                        myinterviewtrainer.topic.level1_tour.init();
+                                        myinterviewtrainer.topic.level1_tour.start();
+                                    }
+                                }
+                            });
+                    }
+                }
+            });
+        })();
+    </script>
+  <script>
+    $(document).ready(function () {
+      var scalerBannerHidden = localStorage.getItem('hideScalerBanner');
+      var scalerBanner = $('.ib-scaler-banner');
+
+      if (!scalerBannerHidden) {
+        scalerBanner.show();
+      }
+
+      function closeHandler(event) {
+        if (!scalerBannerHidden) {
+          localStorage.setItem('hideScalerBanner', true);
+          scalerBanner.hide();
+        }
+      }
+
+      scalerBanner.on('click', '.ribbon-banner__close-action', closeHandler);
+    });
+  </script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      (
+        myinterviewtrainer &&
+        myinterviewtrainer.keyword_search &&
+        myinterviewtrainer.keyword_search.init()
+      );
+    });
+  </script>
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    $('#enable_push_notification').click(window.ask_for_notification_permissions);
+    $('#notification_flash_close').click(function(){
+        localStorage.setItem('ask_for_notification_permissions_cloased_at', new Date());
+    });
+    
+    $(function(){
+        var another_flash_visible = $(".alert").is(':visible');
+        if(Notification && (Notification.permission !== 'granted') && !another_flash_visible){
+            var ask_for_notification_permissions_cloased_at = localStorage.getItem('ask_for_notification_permissions_cloased_at');
+            if(ask_for_notification_permissions_cloased_at){
+                ask_for_notification_permissions_cloased_at = new Date(ask_for_notification_permissions_cloased_at).getTime();
+                var now = new Date().getTime();
+                if((now - ask_for_notification_permissions_cloased_at) > 24*60*60*1000){
+                    $('#ask_for_notification_permissions_flash').removeClass('hide');
+                }
+            }else{
+                $('#ask_for_notification_permissions_flash').removeClass('hide');
+            }
+        }
+    });
+  });
+</script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      $('.password-eye-icon').on('click', function() {
+        $(this).toggleClass('glyphicon-eye-close').toggleClass('glyphicon-eye-open'); //toggle our classes for the eye icon
+        let input = $('#user_password');
+        if (input.attr('type') === 'password') {
+          input.attr('type', 'text');
+        }else {
+          input.attr('type', 'password');
+        }
+      });
+    });
+  </script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      (
+        myinterviewtrainer &&
+        myinterviewtrainer.keyword_search &&
+        myinterviewtrainer.keyword_search.init()
+      );
+    });
+  </script>
+
+
+<div class="modal fade" class="live_interview_request" id="live_interview_request" role="dialog" aria-labelledby="LiveInterviewRequest" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="live_mock_cross_btn"  data-dismiss="modal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+            <path fill="#000" fill-opacity=".5" fill-rule="nonzero" d="M13.523 12.264a.94.94 0 0 1 0 1.325.94.94 0 0 1-1.325 0l-5.3-5.3-5.3 5.3a.94.94 0 0 1-1.325 0 .94.94 0 0 1 0-1.325L5.606 6.93.273 1.598a.94.94 0 0 1 0-1.325.94.94 0 0 1 1.325 0l5.3 5.3 5.3-5.3a.94.94 0 0 1 1.325 0 .94.94 0 0 1 0 1.325L8.19 6.931l5.333 5.333z"/>
+          </svg>
+        </div>
+        <div id="live_mock_interview_onboard_request_received" class="carousel slide live_mock_interview_onboard_carousal" data-ride="carousel" data-interval="false">
+  <ol class="carousel-indicators">
+    <li data-target="#live_mock_interview_onboard_request_received" data-slide-to="0" class="active"></li>
+    <li data-target="#live_mock_interview_onboard_request_received" data-slide-to="1"></li>
+    <li data-target="#live_mock_interview_onboard_request_received" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <div class="h4 text-center" id="interview_type">
+            A peer wants to start a mock interview
+
+      </div>
+      <div class="text-center art-ct">
+        <svg xmlns="http://www.w3.org/2000/svg" width="220" height="47" viewBox="0 0 220 47">
+          <g fill="none" fill-rule="evenodd">
+            <path stroke="#494949" d="M83.19 23.5h1.5"/>
+            <path stroke="#494949" stroke-dasharray="3,2" d="M47.801 24h93.732"/>
+            <path stroke="#494949" d="M105.19 32.5h1.5"/>
+            <path stroke="#494949" stroke-dasharray="3,2" d="M108.69 32.5h61.842"/>
+            <path stroke="#494949" d="M133.69 32.5h1.5"/>
+            <path fill="#68DDE1" d="M61.808 10.288c0 5.405-4.383 9.788-9.788 9.788-5.406 0-9.788-4.383-9.788-9.788C42.232 4.882 46.614.5 52.02.5c5.405 0 9.788 4.382 9.788 9.788"/>
+            <path stroke="#565959" d="M61.808 10.288c0 5.405-4.383 9.788-9.788 9.788-5.406 0-9.788-4.383-9.788-9.788C42.232 4.882 46.614.5 52.02.5c5.405 0 9.788 4.382 9.788 9.788z"/>
+            <path stroke="#DBDBDB" stroke-linecap="round" stroke-width="3" d="M1.498 43.244h197.323"/>
+            <path fill="#68DDE1" d="M32.52 41.406c.752-10.09 9.26-18.07 19.5-18.07s18.747 7.98 19.5 18.07h-39z"/>
+            <path stroke="#565959" d="M32.52 41.406c.752-10.09 9.26-18.07 19.5-18.07s18.747 7.98 19.5 18.07h-39z"/>
+            <path stroke="#DBDBDB" stroke-linecap="round" stroke-width="2" d="M7 34.825h9.08"/>
+            <path stroke="#DBDBDB" d="M218.784 43.202a3 3 0 1 1-6.001 0 3 3 0 0 1 6 0z"/>
+            <path fill="#F9B55A" d="M182.883 15.75a7.25 7.25 0 1 1-14.5 0 7.25 7.25 0 0 1 14.5 0"/>
+            <path stroke="#565959" d="M182.883 15.75a7.25 7.25 0 1 1-14.5 0 7.25 7.25 0 0 1 14.5 0z"/>
+            <path fill="#F9B55A" d="M161.19 41.406c.557-7.474 6.858-13.385 14.443-13.385 7.584 0 13.887 5.911 14.445 13.385H161.19z"/>
+            <path stroke="#565959" d="M161.19 41.406c.557-7.474 6.858-13.385 14.443-13.385 7.584 0 13.887 5.911 14.445 13.385H161.19z"/>
+            <path stroke="#494949" d="M142.031 27.36a.319.319 0 0 1-.226-.544l3.259-3.258-3.258-3.259a.316.316 0 0 1 0-.449.317.317 0 0 1 .45 0l3.483 3.483a.318.318 0 0 1 0 .45l-3.483 3.482a.315.315 0 0 1-.225.094zM106.289 36.266l-3.483-3.482a.318.318 0 0 1 0-.451l3.483-3.482a.316.316 0 0 1 .449 0 .316.316 0 0 1 0 .449l-3.258 3.259 3.259 3.257a.319.319 0 0 1-.45.45z"/>
+            <text fill="#000" fill-opacity=".12" font-family="Nunito-Bold, Nunito" font-size="16" font-weight="bold" letter-spacing="1.742" transform="translate(0 -4.298)">
+              <tspan x="66.945" y="16.298">REAL TIM</tspan> <tspan x="154.083" y="16.298" letter-spacing="1.549">E</tspan>
+            </text>
+          </g>
+        </svg>
+
+        <div class="text-center text-ct">
+          We match you real time with a suitable peer. Please make sure you're available for next <span class="bold">1Hr:30Mins</span> to participate.
+        </div>
+      </div>
+      <div class="text-center btn-bar">
+        <button class="btn btn-default"  href="#live_mock_interview_onboard_request_received" role="button" data-slide="next">Who will interview me?</button>
+      </div>
+
+    </div>
+    <div class="item">
+      <div class="h4 text-center">Few things before we begin</div>
+      <div class="text-center  art-ct" style="margin-top: 30px;">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="290" height="69" viewBox="0 0 290 69">
+          <defs>
+            <path id="a" d="M0 45.702h114.284V0H0z"/>
+          </defs>
+          <g fill="none" fill-rule="evenodd">
+            <g fill="#000">
+              <path fill-opacity=".54" fill-rule="nonzero" d="M162.805 11.193a.664.664 0 0 0-.94 0l-3.56 3.56C157.825 6.72 151.145.333 143 .333c-8.147 0-14.827 6.387-15.307 14.42l-3.56-3.56a.664.664 0 1 0-.94.94l4.667 4.667c.133.133.3.2.473.2.174 0 .34-.067.474-.193l4.666-4.667a.664.664 0 1 0-.94-.94l-3.48 3.48c.507-7.26 6.56-13.013 13.947-13.013 7.386 0 13.44 5.753 13.946 13.006l-3.48-3.48a.664.664 0 1 0-.94.94l4.667 4.667c.133.133.3.2.473.2s.34-.067.473-.193l4.667-4.667a.672.672 0 0 0 0-.947z"/>
+              <path fill-opacity=".12" d="M.847 39.808c-.187-.192-.28-.443-.28-.752v-9.392c0-.31.093-.557.28-.744.186-.187.434-.28.744-.28.32 0 .573.093.76.28.186.187.28.435.28.744v9.392c0 .31-.094.56-.28.752-.187.192-.44.288-.76.288-.31 0-.558-.096-.744-.288zM16.06 28.92c.176.187.264.435.264.744v9.392c0 .31-.09.56-.272.752a.925.925 0 0 1-.704.288c-.341 0-.603-.123-.784-.368l-5.84-7.6v6.928c0 .31-.085.56-.256.752-.17.192-.405.288-.704.288-.299 0-.533-.096-.704-.288-.17-.192-.256-.443-.256-.752v-9.392c0-.31.09-.557.272-.744.181-.187.421-.28.72-.28.33 0 .587.123.768.368l5.824 7.568v-6.912c0-.31.088-.557.264-.744.176-.187.408-.28.696-.28.299 0 .536.093.712.28zm7.374 10.88c-.187-.187-.28-.435-.28-.744v-8.64h-2.912c-.64 0-.96-.283-.96-.848s.32-.848.96-.848h7.888c.64 0 .96.283.96.848s-.32.848-.96.848H25.22v8.64c0 .31-.093.557-.28.744-.187.187-.435.28-.744.28-.32 0-.573-.093-.76-.28zm8.878-.056c-.176-.17-.264-.41-.264-.72v-9.328c0-.31.088-.55.264-.72.176-.17.419-.256.728-.256h5.776c.31 0 .55.07.72.208.171.139.256.336.256.592 0 .267-.085.472-.256.616-.17.144-.41.216-.72.216h-4.752v3.104h4.432c.31 0 .55.07.72.208.171.139.256.341.256.608 0 .256-.085.453-.256.592-.17.139-.41.208-.72.208h-4.432v3.296h4.752c.31 0 .55.072.72.216.171.144.256.35.256.616 0 .256-.085.453-.256.592-.17.139-.41.208-.72.208h-5.776c-.309 0-.552-.085-.728-.256zm20.119-.48a.75.75 0 0 1-.296.608c-.198.16-.43.24-.696.24a1.048 1.048 0 0 1-.88-.48L48.432 36.4c-.214-.341-.44-.581-.68-.72-.24-.139-.552-.208-.936-.208h-1.568v3.584c0 .32-.091.573-.272.76-.182.187-.427.28-.736.28-.31 0-.558-.093-.744-.28-.187-.187-.28-.44-.28-.76v-9.36c0-.31.088-.55.264-.72.176-.17.418-.256.728-.256h4c1.28 0 2.253.285 2.92.856.666.57 1 1.395 1 2.472 0 .875-.248 1.592-.744 2.152s-1.198.92-2.104 1.08c.309.075.58.208.816.4.234.192.464.459.688.8l1.456 2.224c.128.192.192.379.192.56zm-2.8-5.816c.362-.293.544-.744.544-1.352 0-.619-.182-1.07-.544-1.352-.363-.283-.934-.424-1.712-.424h-2.688v3.568h2.688c.778 0 1.349-.147 1.712-.44zm15.342-4.824c.266 0 .506.085.72.256.213.17.32.384.32.64 0 .117-.032.25-.096.4l-4.432 9.536c-.096.203-.243.36-.44.472a1.26 1.26 0 0 1-.632.168 1.26 1.26 0 0 1-.632-.168 1.046 1.046 0 0 1-.44-.472l-4.416-9.536a1.008 1.008 0 0 1-.096-.384c0-.267.11-.485.328-.656.218-.17.466-.256.744-.256a.98.98 0 0 1 .504.136c.154.09.274.227.36.408l3.68 8.176 3.68-8.176c.17-.363.453-.544.848-.544zm4.39 11.184c-.187-.192-.28-.443-.28-.752v-9.392c0-.31.093-.557.28-.744.187-.187.435-.28.744-.28.32 0 .573.093.76.28.187.187.28.435.28.744v9.392c0 .31-.093.56-.28.752-.187.192-.44.288-.76.288-.31 0-.557-.096-.744-.288zm6.222-.064c-.176-.17-.264-.41-.264-.72v-9.328c0-.31.088-.55.264-.72.176-.17.419-.256.728-.256h5.776c.31 0 .55.07.72.208.17.139.256.336.256.592 0 .267-.085.472-.256.616-.17.144-.41.216-.72.216h-4.752v3.104h4.432c.31 0 .55.07.72.208.17.139.256.341.256.608 0 .256-.085.453-.256.592-.17.139-.41.208-.72.208h-4.432v3.296h4.752c.31 0 .55.072.72.216.17.144.256.35.256.616 0 .256-.085.453-.256.592-.17.139-.41.208-.72.208h-5.776c-.31 0-.552-.085-.728-.256zm25.406-10.96a.997.997 0 0 1 .552-.16c.256 0 .478.08.664.24a.8.8 0 0 1 .28.64c0 .096-.026.235-.08.416l-3.44 9.52a.99.99 0 0 1-.424.496 1.245 1.245 0 0 1-.648.176c-.234 0-.453-.059-.656-.176a.904.904 0 0 1-.416-.496l-2.656-7.536-2.704 7.536a.99.99 0 0 1-.424.496 1.245 1.245 0 0 1-.648.176c-.234 0-.45-.059-.648-.176a.912.912 0 0 1-.408-.496l-3.44-9.52a1.347 1.347 0 0 1-.08-.416c0-.267.1-.48.296-.64.198-.16.43-.24.696-.24.214 0 .406.053.576.16a.89.89 0 0 1 .368.48l2.72 7.824 2.8-7.776c.075-.213.198-.381.368-.504a.939.939 0 0 1 .56-.184.996.996 0 0 1 .944.704l2.72 7.856 2.768-7.92a.903.903 0 0 1 .36-.48zm78.201 10.96c-.176-.17-.264-.41-.264-.72v-9.328c0-.31.088-.55.264-.72.176-.17.419-.256.728-.256h5.776c.31 0 .55.07.72.208.171.139.256.336.256.592 0 .267-.085.472-.256.616-.17.144-.41.216-.72.216h-4.752v3.104h4.432c.31 0 .55.07.72.208.171.139.256.341.256.608 0 .256-.085.453-.256.592-.17.139-.41.208-.72.208h-4.432v3.296h4.752c.31 0 .55.072.72.216.171.144.256.35.256.616 0 .256-.085.453-.256.592-.17.139-.41.208-.72.208h-5.776c-.309 0-.552-.085-.728-.256zm21.03-.56a.795.795 0 0 1-.295.624 1.01 1.01 0 0 1-.68.256.909.909 0 0 1-.48-.136.907.907 0 0 1-.352-.424l-.96-2.144h-5.632l-.96 2.144a.907.907 0 0 1-.352.424.937.937 0 0 1-.496.136 1.02 1.02 0 0 1-.672-.256.787.787 0 0 1-.304-.624c0-.139.032-.277.096-.416l4.416-9.488c.096-.213.242-.376.44-.488a1.26 1.26 0 0 1 .632-.168c.224 0 .434.056.632.168.197.112.344.275.44.488l4.432 9.488a.985.985 0 0 1 .096.416zm-7.695-3.424h4.224l-2.112-4.752-2.112 4.752zm12.822 3.68a4.68 4.68 0 0 1-1.88-2.016c-.438-.875-.656-1.899-.656-3.072s.218-2.195.656-3.064a4.69 4.69 0 0 1 1.88-2.008c.816-.47 1.768-.704 2.856-.704.704 0 1.365.104 1.984.312.618.208 1.168.51 1.648.904a.918.918 0 0 1 .288.336c.053.117.08.261.08.432a.918.918 0 0 1-.192.592.577.577 0 0 1-.464.24c-.214 0-.432-.075-.656-.224-.459-.341-.886-.579-1.28-.712a4.08 4.08 0 0 0-1.312-.2c-1.11 0-1.95.347-2.52 1.04-.57.693-.856 1.712-.856 3.056 0 1.355.285 2.379.856 3.072.57.693 1.41 1.04 2.52 1.04.458 0 .882-.07 1.272-.208.39-.139.83-.373 1.32-.704.106-.064.213-.117.32-.16a.896.896 0 0 1 .336-.064c.181 0 .336.08.464.24.128.16.192.357.192.592 0 .16-.027.301-.08.424a.896.896 0 0 1-.288.344c-.48.395-1.03.696-1.648.904a6.186 6.186 0 0 1-1.984.312c-1.088 0-2.04-.235-2.856-.704zm19.958-10.52c.181.187.272.435.272.744v9.392c0 .31-.093.56-.28.752-.187.192-.43.288-.728.288-.31 0-.555-.096-.736-.288-.181-.192-.272-.443-.272-.752v-3.952h-5.776v3.952c0 .31-.093.56-.28.752-.187.192-.435.288-.744.288-.299 0-.541-.096-.728-.288-.187-.192-.28-.443-.28-.752v-9.392c0-.31.09-.557.272-.744.181-.187.427-.28.736-.28.31 0 .557.093.744.28.187.187.28.435.28.744v3.776h5.776v-3.776c0-.31.09-.557.272-.744.181-.187.427-.28.736-.28.31 0 .555.093.736.28zm6.614 10.52c-.805-.47-1.426-1.141-1.864-2.016-.437-.875-.656-1.899-.656-3.072s.216-2.195.648-3.064a4.655 4.655 0 0 1 1.864-2.008c.81-.47 1.766-.704 2.864-.704 1.099 0 2.05.235 2.856.704.806.47 1.424 1.139 1.856 2.008.432.87.648 1.89.648 3.064 0 1.173-.218 2.197-.656 3.072-.437.875-1.058 1.547-1.864 2.016-.805.47-1.752.704-2.84.704-1.098 0-2.05-.235-2.856-.704zm5.28-2.016c.582-.715.872-1.739.872-3.072s-.29-2.355-.872-3.064c-.581-.71-1.39-1.064-2.424-1.064-1.045 0-1.858.355-2.44 1.064-.581.71-.872 1.73-.872 3.064 0 1.333.29 2.357.872 3.072.582.715 1.395 1.072 2.44 1.072 1.035 0 1.843-.357 2.424-1.072zm9.022 2.376c-.186-.187-.28-.435-.28-.744v-8.64h-2.912c-.64 0-.96-.283-.96-.848s.32-.848.96-.848h7.888c.64 0 .96.283.96.848s-.32.848-.96.848h-2.912v8.64c0 .31-.093.557-.28.744-.186.187-.434.28-.744.28-.32 0-.573-.093-.76-.28zm18.167-10.88c.181.187.272.435.272.744v9.392c0 .31-.094.56-.28.752-.187.192-.43.288-.728.288-.31 0-.555-.096-.736-.288-.182-.192-.272-.443-.272-.752v-3.952h-5.776v3.952c0 .31-.094.56-.28.752-.187.192-.435.288-.744.288-.299 0-.542-.096-.728-.288-.187-.192-.28-.443-.28-.752v-9.392c0-.31.09-.557.272-.744.181-.187.426-.28.736-.28.309 0 .557.093.744.28.186.187.28.435.28.744v3.776h5.776v-3.776c0-.31.09-.557.272-.744.181-.187.426-.28.736-.28.309 0 .554.093.736.28zm4.71 10.824c-.176-.17-.264-.41-.264-.72v-9.328c0-.31.088-.55.264-.72.176-.17.419-.256.728-.256h5.776c.31 0 .55.07.72.208.17.139.256.336.256.592 0 .267-.085.472-.256.616-.17.144-.41.216-.72.216h-4.752v3.104h4.432c.31 0 .55.07.72.208.17.139.256.341.256.608 0 .256-.085.453-.256.592-.17.139-.41.208-.72.208h-4.432v3.296h4.752c.31 0 .55.072.72.216.17.144.256.35.256.616 0 .256-.085.453-.256.592-.17.139-.41.208-.72.208h-5.776c-.31 0-.552-.085-.728-.256zm20.118-.48a.75.75 0 0 1-.296.608c-.197.16-.43.24-.696.24a1.048 1.048 0 0 1-.88-.48L285.22 36.4c-.213-.341-.44-.581-.68-.72-.24-.139-.552-.208-.936-.208h-1.568v3.584c0 .32-.09.573-.272.76-.181.187-.427.28-.736.28-.31 0-.557-.093-.744-.28-.187-.187-.28-.44-.28-.76v-9.36c0-.31.088-.55.264-.72.176-.17.419-.256.728-.256h4c1.28 0 2.253.285 2.92.856.667.57 1 1.395 1 2.472 0 .875-.248 1.592-.744 2.152s-1.197.92-2.104 1.08c.31.075.581.208.816.4.235.192.464.459.688.8l1.456 2.224c.128.192.192.379.192.56zm-2.8-5.816c.363-.293.544-.744.544-1.352 0-.619-.181-1.07-.544-1.352-.363-.283-.933-.424-1.712-.424h-2.688v3.568h2.688c.779 0 1.35-.147 1.712-.44z"/>
+            </g>
+            <g transform="translate(85 23)">
+              <path fill="#FFF" d="M79.894 26.15h-27.53c-2.2 0-4-1.8-4-4V4.654c0-2.2 1.8-4 4-4h27.53c2.2 0 4 1.8 4 4V22.15c0 2.2-1.8 4-4 4z"/>
+              <path stroke="#2E4275" d="M79.894 26.15h-27.53c-2.2 0-4-1.8-4-4V4.654c0-2.2 1.8-4 4-4h27.53c2.2 0 4 1.8 4 4V22.15c0 2.2-1.8 4-4 4z"/>
+              <mask id="b" fill="#fff">
+                <use xlink:href="#a"/>
+              </mask>
+              <path fill="#494949" d="M56.689 15h21V3h-21z" mask="url(#b)"/>
+              <path stroke="#DBDBDB" stroke-linecap="round" stroke-width="3" d="M1.69 43.244h100.607" mask="url(#b)"/>
+              <path fill="#E2E2E2" d="M89.43 39.666H40.877c-.928 0-1.688-.661-1.688-1.469l7.904-11.627h36.151l7.874 11.627c0 .808-.759 1.469-1.688 1.469" mask="url(#b)"/>
+              <path stroke="#2E4275" d="M89.43 39.666H40.877c-.928 0-1.688-.661-1.688-1.469l7.904-11.627h36.151l7.874 11.627c0 .808-.759 1.469-1.688 1.469z" mask="url(#b)"/>
+              <path fill="#FFF" d="M83.274 27.022l7.423 11.175c0 .807-.338 1.016-1.267 1.016H41.3c-.928 0-1.689-.209-1.689-1.016" mask="url(#b)"/>
+              <path fill="#F5A623" d="M39.19 40.004c0 .808.76 1.468 1.687 1.468H89.43c.93 0 1.69-.66 1.69-1.468v-1.467l-51.93.226v1.24z" mask="url(#b)"/>
+              <path stroke="#2E4275" d="M39.19 40.004c0 .808.76 1.468 1.687 1.468H89.43c.93 0 1.69-.66 1.69-1.468v-1.467l-51.93.226v1.24z" mask="url(#b)"/>
+              <path fill="#FFF" d="M54.02 26.305h-3.606c-2.2 0-4-1.8-4-4V4.5c0-2.2 1.8-4 4-4h3.605v25.805z" mask="url(#b)"/>
+              <path stroke="#2E4275" d="M54.02 26.305h-3.606c-2.2 0-4-1.8-4-4V4.5c0-2.2 1.8-4 4-4h3.605v25.805z" mask="url(#b)"/>
+              <path fill="#68DDE1" d="M45.808 10.288c0 5.405-4.383 9.788-9.788 9.788-5.406 0-9.788-4.383-9.788-9.788C26.232 4.882 30.614.5 36.02.5c5.405 0 9.788 4.382 9.788 9.788" mask="url(#b)"/>
+              <path stroke="#565959" d="M45.808 10.288c0 5.405-4.383 9.788-9.788 9.788-5.406 0-9.788-4.383-9.788-9.788C26.232 4.882 30.614.5 36.02.5c5.405 0 9.788 4.382 9.788 9.788z" mask="url(#b)"/>
+              <path fill="#68DDE1" d="M16.52 41.406c.752-10.09 9.26-18.07 19.5-18.07s18.747 7.98 19.5 18.07h-39z" mask="url(#b)"/>
+              <path stroke="#565959" d="M16.52 41.406c.752-10.09 9.26-18.07 19.5-18.07s18.747 7.98 19.5 18.07h-39z" mask="url(#b)"/>
+              <path stroke="#DBDBDB" stroke-linecap="round" stroke-width="2" d="M1 34.825h9.08" mask="url(#b)"/>
+              <path fill="#F9B55A" d="M79.405 14.123a2.623 2.623 0 1 1-5.246 0 2.623 2.623 0 0 1 5.246 0" mask="url(#b)"/>
+              <path stroke="#565959" d="M79.405 14.123a2.623 2.623 0 1 1-5.246 0 2.623 2.623 0 0 1 5.246 0z" mask="url(#b)"/>
+              <path fill="#F9B55A" d="M71.555 23.406c.202-2.704 2.482-4.843 5.227-4.843 2.744 0 5.024 2.14 5.225 4.843H71.555z" mask="url(#b)"/>
+              <path stroke="#565959" d="M71.555 23.406c.202-2.704 2.482-4.843 5.227-4.843 2.744 0 5.024 2.14 5.225 4.843H71.555z" mask="url(#b)"/>
+              <path stroke="#DBDBDB" d="M113.784 42.202a3 3 0 1 1-6.001 0 3 3 0 0 1 6 0z" mask="url(#b)"/>
+              <path stroke="#2E4275" stroke-linecap="round" d="M48.69 5h3M48.69 8h3M48.69 11h3M48.69 14h3M48.69 17h3M48.69 20h3" mask="url(#b)"/>
+              <path stroke="#E2E2E2" d="M56.69 17h13M56.69 19h13" mask="url(#b)"/>
+            </g>
+          </g>
+        </svg>
+
+        <div class="text-center text-ct">
+          First you interview your peer and then your peer interviews you or vice versa. We provide you the question and detailed answer.
+        </div>
+      </div>
+      <div class="text-center btn-bar">
+        <button class="btn btn-default"  href="#live_mock_interview_onboard_request_received" role="button" data-slide="prev">Back</button>
+        <button class="btn btn-default"  href="#live_mock_interview_onboard_request_received" role="button" data-slide="next">How does it work?</button>
+      </div>
+    </div>
+    <div class="item">
+      <div>
+        <div class="h4 text-center">Few things before we begin</div>
+        <div class="text-center  art-ct" style="    margin-top: 26px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="286" height="48" viewBox="0 0 286 48">
+            <g fill="none" fill-rule="evenodd">
+              <path fill="#000" fill-opacity=".12" d="M.815 29.744c-.176-.17-.264-.41-.264-.72v-9.328c0-.31.088-.55.264-.72.176-.17.418-.256.728-.256h5.776c.309 0 .549.07.72.208.17.139.256.336.256.592 0 .267-.086.472-.256.616-.171.144-.411.216-.72.216H2.567v3.104h4.432c.309 0 .549.07.72.208.17.139.256.341.256.608 0 .256-.086.453-.256.592-.171.139-.411.208-.72.208H2.567v3.296h4.752c.309 0 .549.072.72.216.17.144.256.35.256.616 0 .256-.086.453-.256.592-.171.139-.411.208-.72.208H1.543c-.31 0-.552-.085-.728-.256zm19.958-11.12c.267 0 .507.085.72.256.213.17.32.384.32.64 0 .117-.032.25-.096.4l-4.432 9.536c-.096.203-.243.36-.44.472a1.26 1.26 0 0 1-.632.168 1.26 1.26 0 0 1-.632-.168 1.046 1.046 0 0 1-.44-.472l-4.416-9.536a1.008 1.008 0 0 1-.096-.384c0-.267.11-.485.328-.656.219-.17.467-.256.744-.256a.98.98 0 0 1 .504.136c.155.09.275.227.36.408l3.68 8.176 3.68-8.176c.17-.363.453-.544.848-.544zm13.358 10.56a.795.795 0 0 1-.296.624 1.01 1.01 0 0 1-.68.256.909.909 0 0 1-.48-.136.907.907 0 0 1-.352-.424l-.96-2.144h-5.632l-.96 2.144a.907.907 0 0 1-.352.424.937.937 0 0 1-.496.136 1.02 1.02 0 0 1-.672-.256.787.787 0 0 1-.304-.624c0-.139.032-.277.096-.416l4.416-9.488c.096-.213.243-.376.44-.488a1.26 1.26 0 0 1 .632-.168c.224 0 .435.056.632.168.197.112.344.275.44.488l4.432 9.488a.985.985 0 0 1 .096.416zm-7.696-3.424h4.224l-2.112-4.752-2.112 4.752zm11.246 3.984c-.17-.17-.256-.405-.256-.704v-9.376c0-.31.094-.557.28-.744.187-.187.435-.28.744-.28.32 0 .574.093.76.28.187.187.28.435.28.744v8.64h4.496c.64 0 .96.283.96.848s-.32.848-.96.848h-5.584c-.309 0-.549-.085-.72-.256zm11.055-.8c-.8-.8-1.2-1.968-1.2-3.504v-5.776c0-.31.09-.557.272-.744.18-.187.426-.28.736-.28.309 0 .554.093.736.28.18.187.272.435.272.744v5.888c0 .97.229 1.704.688 2.2.458.496 1.13.744 2.016.744.874 0 1.54-.25 2-.752.458-.501.688-1.232.688-2.192v-5.888c0-.31.09-.557.272-.744.18-.187.426-.28.736-.28.309 0 .554.093.736.28.18.187.272.435.272.744v5.776c0 1.525-.4 2.69-1.2 3.496-.8.805-1.968 1.208-3.504 1.208-1.547 0-2.72-.4-3.52-1.2zm22.574.24a.795.795 0 0 1-.296.624 1.01 1.01 0 0 1-.68.256.909.909 0 0 1-.48-.136.907.907 0 0 1-.352-.424l-.96-2.144H62.91l-.96 2.144a.907.907 0 0 1-.352.424.937.937 0 0 1-.496.136 1.02 1.02 0 0 1-.672-.256.787.787 0 0 1-.304-.624c0-.139.032-.277.096-.416l4.416-9.488c.096-.213.242-.376.44-.488a1.26 1.26 0 0 1 .632-.168c.224 0 .434.056.632.168.197.112.344.275.44.488l4.432 9.488a.985.985 0 0 1 .096.416zm-7.696-3.424h4.224l-2.112-4.752-2.112 4.752zm12.534 4.04c-.187-.187-.28-.435-.28-.744v-8.64h-2.912c-.64 0-.96-.283-.96-.848s.32-.848.96-.848h7.888c.64 0 .96.283.96.848s-.32.848-.96.848h-2.912v8.64c0 .31-.093.557-.28.744-.187.187-.435.28-.744.28-.32 0-.573-.093-.76-.28zm8.878-.056c-.176-.17-.264-.41-.264-.72v-9.328c0-.31.088-.55.264-.72.176-.17.419-.256.728-.256h5.776c.31 0 .55.07.72.208.17.139.256.336.256.592 0 .267-.085.472-.256.616-.17.144-.41.216-.72.216h-4.752v3.104h4.432c.31 0 .55.07.72.208.17.139.256.341.256.608 0 .256-.085.453-.256.592-.17.139-.41.208-.72.208h-4.432v3.296h4.752c.31 0 .55.072.72.216.17.144.256.35.256.616 0 .256-.085.453-.256.592-.17.139-.41.208-.72.208h-5.776c-.31 0-.552-.085-.728-.256zm90.183 0c-.176-.17-.264-.41-.264-.72v-9.328c0-.31.088-.55.264-.72.176-.17.419-.256.728-.256h5.776c.31 0 .55.07.72.208.171.139.256.336.256.592 0 .267-.085.472-.256.616-.17.144-.41.216-.72.216h-4.752v3.104h4.432c.31 0 .55.07.72.208.171.139.256.341.256.608 0 .256-.085.453-.256.592-.17.139-.41.208-.72.208h-4.432v3.296h4.752c.31 0 .55.072.72.216.171.144.256.35.256.616 0 .256-.085.453-.256.592-.17.139-.41.208-.72.208h-5.776c-.309 0-.552-.085-.728-.256zm21.03-.56a.795.795 0 0 1-.295.624 1.01 1.01 0 0 1-.68.256.909.909 0 0 1-.48-.136.907.907 0 0 1-.352-.424l-.96-2.144h-5.632l-.96 2.144a.907.907 0 0 1-.352.424.937.937 0 0 1-.496.136 1.02 1.02 0 0 1-.672-.256.787.787 0 0 1-.304-.624c0-.139.032-.277.096-.416l4.416-9.488c.096-.213.242-.376.44-.488a1.26 1.26 0 0 1 .632-.168c.224 0 .434.056.632.168.197.112.344.275.44.488l4.432 9.488a.985.985 0 0 1 .096.416zm-7.695-3.424h4.224l-2.112-4.752-2.112 4.752zm12.822 3.68a4.68 4.68 0 0 1-1.88-2.016c-.438-.875-.656-1.899-.656-3.072s.218-2.195.656-3.064a4.69 4.69 0 0 1 1.88-2.008c.816-.47 1.768-.704 2.856-.704.704 0 1.365.104 1.984.312.618.208 1.168.51 1.648.904a.918.918 0 0 1 .288.336c.053.117.08.261.08.432a.918.918 0 0 1-.192.592.577.577 0 0 1-.464.24c-.214 0-.432-.075-.656-.224-.459-.341-.886-.579-1.28-.712a4.08 4.08 0 0 0-1.312-.2c-1.11 0-1.95.347-2.52 1.04-.57.693-.856 1.712-.856 3.056 0 1.355.285 2.379.856 3.072.57.693 1.41 1.04 2.52 1.04.458 0 .882-.07 1.272-.208.39-.139.83-.373 1.32-.704.106-.064.213-.117.32-.16a.896.896 0 0 1 .336-.064c.181 0 .336.08.464.24.128.16.192.357.192.592 0 .16-.027.301-.08.424a.896.896 0 0 1-.288.344c-.48.395-1.03.696-1.648.904a6.186 6.186 0 0 1-1.984.312c-1.088 0-2.04-.235-2.856-.704zm19.958-10.52c.181.187.272.435.272.744v9.392c0 .31-.093.56-.28.752-.187.192-.43.288-.728.288-.31 0-.555-.096-.736-.288-.181-.192-.272-.443-.272-.752v-3.952h-5.776v3.952c0 .31-.093.56-.28.752-.187.192-.435.288-.744.288-.299 0-.541-.096-.728-.288-.187-.192-.28-.443-.28-.752v-9.392c0-.31.09-.557.272-.744.181-.187.427-.28.736-.28.31 0 .557.093.744.28.187.187.28.435.28.744v3.776h5.776v-3.776c0-.31.09-.557.272-.744.181-.187.427-.28.736-.28.31 0 .555.093.736.28zm6.614 10.52c-.805-.47-1.426-1.141-1.864-2.016-.437-.875-.656-1.899-.656-3.072s.216-2.195.648-3.064a4.655 4.655 0 0 1 1.864-2.008c.81-.47 1.766-.704 2.864-.704 1.099 0 2.05.235 2.856.704.806.47 1.424 1.139 1.856 2.008.432.87.648 1.89.648 3.064 0 1.173-.218 2.197-.656 3.072-.437.875-1.058 1.547-1.864 2.016-.805.47-1.752.704-2.84.704-1.098 0-2.05-.235-2.856-.704zm5.28-2.016c.582-.715.872-1.739.872-3.072s-.29-2.355-.872-3.064c-.581-.71-1.39-1.064-2.424-1.064-1.045 0-1.858.355-2.44 1.064-.581.71-.872 1.73-.872 3.064 0 1.333.29 2.357.872 3.072.582.715 1.395 1.072 2.44 1.072 1.035 0 1.843-.357 2.424-1.072zm9.022 2.376c-.186-.187-.28-.435-.28-.744v-8.64h-2.912c-.64 0-.96-.283-.96-.848s.32-.848.96-.848h7.888c.64 0 .96.283.96.848s-.32.848-.96.848h-2.912v8.64c0 .31-.093.557-.28.744-.186.187-.434.28-.744.28-.32 0-.573-.093-.76-.28zm18.167-10.88c.181.187.272.435.272.744v9.392c0 .31-.094.56-.28.752-.187.192-.43.288-.728.288-.31 0-.555-.096-.736-.288-.182-.192-.272-.443-.272-.752v-3.952h-5.776v3.952c0 .31-.094.56-.28.752-.187.192-.435.288-.744.288-.299 0-.542-.096-.728-.288-.187-.192-.28-.443-.28-.752v-9.392c0-.31.09-.557.272-.744.181-.187.426-.28.736-.28.309 0 .557.093.744.28.186.187.28.435.28.744v3.776h5.776v-3.776c0-.31.09-.557.272-.744.181-.187.426-.28.736-.28.309 0 .554.093.736.28zm4.71 10.824c-.176-.17-.264-.41-.264-.72v-9.328c0-.31.088-.55.264-.72.176-.17.419-.256.728-.256h5.776c.31 0 .55.07.72.208.17.139.256.336.256.592 0 .267-.085.472-.256.616-.17.144-.41.216-.72.216h-4.752v3.104h4.432c.31 0 .55.07.72.208.17.139.256.341.256.608 0 .256-.085.453-.256.592-.17.139-.41.208-.72.208h-4.432v3.296h4.752c.31 0 .55.072.72.216.17.144.256.35.256.616 0 .256-.085.453-.256.592-.17.139-.41.208-.72.208h-5.776c-.31 0-.552-.085-.728-.256zm20.118-.48a.75.75 0 0 1-.296.608c-.197.16-.43.24-.696.24a1.048 1.048 0 0 1-.88-.48l-2.128-3.232c-.213-.341-.44-.581-.68-.72-.24-.139-.552-.208-.936-.208h-1.568v3.584c0 .32-.09.573-.272.76-.181.187-.427.28-.736.28-.31 0-.557-.093-.744-.28-.187-.187-.28-.44-.28-.76v-9.36c0-.31.088-.55.264-.72.176-.17.419-.256.728-.256h4c1.28 0 2.253.285 2.92.856.667.57 1 1.395 1 2.472 0 .875-.248 1.592-.744 2.152s-1.197.92-2.104 1.08c.31.075.581.208.816.4.235.192.464.459.688.8l1.456 2.224c.128.192.192.379.192.56zm-2.8-5.816c.363-.293.544-.744.544-1.352 0-.619-.181-1.07-.544-1.352-.363-.283-.933-.424-1.712-.424h-2.688v3.568h2.688c.779 0 1.35-.147 1.712-.44z"/>
+              <path fill="#68DDE1" d="M164.376 26.55c.168-1.18-.337-2.357-1.262-3.114l-.169-.084c-.084 0-.084-.084-.084-.084l-.084-.085s-.084 0-.084-.084l-.169-.084c-.084 0-.168-.084-.252-.084-1.598-.505-3.281-.253-4.879-.168-.421 0-3.787 0-3.871.336l.505-1.767c.252-.925.589-1.934.841-2.945.421-1.43.589-2.524.421-3.617-.168-1.43-.926-2.692-2.187-3.45-.673-.42-1.431-.672-2.188-.672h-.168c-.758 0-1.179.42-1.263 1.177-.084.926-.168 1.767-.336 2.609-.252 1.43-.589 2.607-1.178 3.618-.336.588-.673 1.093-1.178 1.599-.589.672-1.262 1.345-1.935 2.102l-1.598 1.852c-.337.42-.758.84-1.179 1.261-.084.085-.168.169-.336.253-.253.252-.589.42-.926.588-.168.084-.42.168-.841.253-1.346.42-2.188.758-2.188 1.6 0 .42-.084.84-.084 1.178v13.965h2.188c.757.084 1.514.252 2.44.421l.421.084c1.935.337 3.702.59 5.469.842 4.375.505 9.592 1.768 12.789-2.188 1.261-1.599 1.429-3.87 1.682-5.89a109.988 109.988 0 0 0 1.683-9.423"/>
+              <path stroke="#565959" d="M164.376 26.55c.168-1.18-.337-2.357-1.262-3.114l-.169-.084c-.084 0-.084-.084-.084-.084l-.084-.085s-.084 0-.084-.084l-.169-.084c-.084 0-.168-.084-.252-.084-1.598-.505-3.281-.253-4.879-.168-.421 0-3.787 0-3.871.336l.505-1.767c.252-.925.589-1.934.841-2.945.421-1.43.589-2.524.421-3.617-.168-1.43-.926-2.692-2.187-3.45-.673-.42-1.431-.672-2.188-.672h-.168c-.758 0-1.179.42-1.263 1.177-.084.926-.168 1.767-.336 2.609-.252 1.43-.589 2.607-1.178 3.618-.336.588-.673 1.093-1.178 1.599-.589.672-1.262 1.345-1.935 2.102l-1.598 1.852c-.337.42-.758.84-1.179 1.261-.084.085-.168.169-.336.253-.253.252-.589.42-.926.588-.168.084-.42.168-.841.253-1.346.42-2.188.758-2.188 1.6 0 .42-.084.84-.084 1.178v13.965h2.188c.757.084 1.514.252 2.44.421l.421.084c1.935.337 3.702.59 5.469.842 4.375.505 9.592 1.768 12.789-2.188 1.261-1.599 1.429-3.87 1.682-5.89a109.988 109.988 0 0 0 1.683-9.423z"/>
+              <path fill="#68DDE1" d="M134.002 44.302h-5.806a1.329 1.329 0 0 1-1.345-1.347V25.791c0-.757.589-1.345 1.345-1.345h5.806c.758 0 1.347.588 1.347 1.345v17.164a1.33 1.33 0 0 1-1.347 1.347"/>
+              <path stroke="#565959" d="M134.002 44.302h-5.806a1.329 1.329 0 0 1-1.345-1.347V25.791c0-.757.589-1.345 1.345-1.345h5.806c.758 0 1.347.588 1.347 1.345v17.164a1.33 1.33 0 0 1-1.347 1.347z"/>
+              <path fill="#F9B55A" d="M142.982 10.28c.093-.65-.186-1.3-.697-1.718l-.093-.047c-.047 0-.047-.046-.047-.046l-.046-.046s-.047 0-.047-.046l-.092-.047c-.046 0-.093-.047-.14-.047-.882-.278-1.812-.14-2.694-.093-.233 0-2.09 0-2.137.187l.278-.977c.14-.511.325-1.068.465-1.626.232-.79.325-1.393.232-1.997-.093-.79-.51-1.487-1.208-1.905a2.298 2.298 0 0 0-1.208-.372h-.093c-.418 0-.65.232-.697.65-.047.512-.092.976-.185 1.44-.14.79-.325 1.44-.652 1.999a3.883 3.883 0 0 1-.65.882c-.325.372-.696.744-1.068 1.162l-.883 1.022a8.828 8.828 0 0 1-.65.697.615.615 0 0 1-.186.139c-.14.14-.325.232-.512.325a1.819 1.819 0 0 1-.464.14c-.744.232-1.208.418-1.208.883 0 .232-.047.464-.047.65v7.713h1.208c.418.046.837.14 1.348.232l.233.046c1.068.187 2.044.325 3.02.465 2.415.279 5.296.976 7.062-1.208.696-.883.79-2.137.928-3.252.372-1.673.698-3.438.93-5.204"/>
+              <path stroke="#565959" d="M142.982 10.28c.093-.65-.186-1.3-.697-1.718l-.093-.047c-.047 0-.047-.046-.047-.046l-.046-.046s-.047 0-.047-.046l-.092-.047c-.046 0-.093-.047-.14-.047-.882-.278-1.812-.14-2.694-.093-.233 0-2.09 0-2.137.187l.278-.977c.14-.511.325-1.068.465-1.626.232-.79.325-1.393.232-1.997-.093-.79-.51-1.487-1.208-1.905a2.298 2.298 0 0 0-1.208-.372h-.093c-.418 0-.65.232-.697.65-.047.512-.092.976-.185 1.44-.14.79-.325 1.44-.652 1.999a3.883 3.883 0 0 1-.65.882c-.325.372-.696.744-1.068 1.162l-.883 1.022a8.828 8.828 0 0 1-.65.697.615.615 0 0 1-.186.139c-.14.14-.325.232-.512.325a1.819 1.819 0 0 1-.464.14c-.744.232-1.208.418-1.208.883 0 .232-.047.464-.047.65v7.713h1.208c.418.046.837.14 1.348.232l.233.046c1.068.187 2.044.325 3.02.465 2.415.279 5.296.976 7.062-1.208.696-.883.79-2.137.928-3.252.372-1.673.698-3.438.93-5.204z"/>
+              <path fill="#F9B55A" d="M124.749 20.085h-3.206a.733.733 0 0 1-.743-.743v-9.48c0-.417.325-.742.743-.742h3.206c.418 0 .743.325.743.743v9.479a.733.733 0 0 1-.743.743"/>
+              <path stroke="#565959" d="M124.749 20.085h-3.206a.733.733 0 0 1-.743-.743v-9.48c0-.417.325-.742.743-.742h3.206c.418 0 .743.325.743.743v9.479a.733.733 0 0 1-.743.743z"/>
+              <path stroke="#DBDBDB" stroke-linecap="round" stroke-width="2" d="M103.81 19.972h9.082"/>
+              <path stroke="#DBDBDB" d="M174.595 36.35a3 3 0 1 1-6.001-.002 3 3 0 0 1 6 .001z"/>
+              <path stroke="#DBDBDB" stroke-linecap="round" stroke-width="3" d="M94.5 46.391h92"/>
+              <path fill="#494949" d="M120.496 42.286l-1.21-1.117a5.64 5.64 0 0 0-3.862-1.512h-6.865a.934.934 0 0 1-.93-.931v-8.004c0-.512.42-.931.93-.931h10.983c.512 0 .931.419.931.93v11.565h.023zm-.93-14.123h-11.007A2.566 2.566 0 0 0 106 30.722v7.98a2.567 2.567 0 0 0 2.56 2.56h6.864a3.99 3.99 0 0 1 2.745 1.07l1.558 1.443c.256.256.606.372.955.372a1.41 1.41 0 0 0 1.42-1.42V30.723c.022-1.42-1.14-2.56-2.537-2.56z"/>
+              <path fill="#494949" d="M115.656 35.096h-3.188a.33.33 0 0 0-.326.372 1.95 1.95 0 0 0 1.91 1.56c.953 0 1.72-.676 1.907-1.56.046-.186-.117-.372-.303-.372M117.89 32.84a.86.86 0 1 1 .001 1.72.86.86 0 0 1-.001-1.72M110.234 32.84a.86.86 0 1 1 .002 1.72.86.86 0 0 1-.002-1.72"/>
+            </g>
+          </svg>
+        </div>
+        <div class="text-center text-ct">
+          The interview would be through an in-site voice call, which ensures anonymity. After completion you and your peer will be asked to share a detailed feedback.
+        </div>
+      </div>
+      <div class="text-center btn-bar">
+        <button class="btn btn-success find_live_peer_btn" id="find_live_peer_btn">
+            Join mock interview
+
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade live_interview_request" class="live_interview_request" id="live_interview_request_experienced_user" role="dialog" aria-labelledby="LiveInterviewRequest" data-backdrop="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="live_mock_cross_btn"  data-dismiss="modal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+            <path fill="#000" fill-opacity=".5" fill-rule="nonzero" d="M13.523 12.264a.94.94 0 0 1 0 1.325.94.94 0 0 1-1.325 0l-5.3-5.3-5.3 5.3a.94.94 0 0 1-1.325 0 .94.94 0 0 1 0-1.325L5.606 6.93.273 1.598a.94.94 0 0 1 0-1.325.94.94 0 0 1 1.325 0l5.3 5.3 5.3-5.3a.94.94 0 0 1 1.325 0 .94.94 0 0 1 0 1.325L8.19 6.931l5.333 5.333z"/>
+          </svg>
+        </div>
+        <div class="column">
+        <div class="pull-left col-md-2" style="padding-left: 0; padding-top: 7%;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="46" height="26" viewBox="0 0 46 26">
+            <g fill="none" fill-rule="evenodd">
+              <path stroke="#494949" d="M13 14h1"/>
+              <path stroke="#494949" stroke-dasharray="3,2" d="M15 14h13"/>
+              <path stroke="#494949" d="M24 21h1"/>
+              <path stroke="#494949" stroke-dasharray="3,2" d="M26 21h13"/>
+              <path stroke="#494949" d="M43 22h1"/>
+              <path fill="#68DDE1" d="M17.294 7.167c0 3.149-2.502 5.702-5.588 5.702-3.087 0-5.589-2.553-5.589-5.702 0-3.15 2.502-5.702 5.589-5.702 3.086 0 5.588 2.553 5.588 5.702"/>
+              <path stroke="#565959" d="M17.294 7.167c0 3.149-2.502 5.702-5.588 5.702-3.087 0-5.589-2.553-5.589-5.702 0-3.15 2.502-5.702 5.589-5.702 3.086 0 5.588 2.553 5.588 5.702z"/>
+              <path fill="#68DDE1" d="M.571 25.296c.43-5.878 5.288-10.527 11.135-10.527 5.846 0 10.703 4.649 11.133 10.527H.571z"/>
+              <path stroke="#565959" d="M.571 25.296c.43-5.878 5.288-10.527 11.135-10.527 5.846 0 10.703 4.649 11.133 10.527H.571z"/>
+              <path fill="#F9B55A" d="M40.746 10.35c0 2.332-1.853 4.223-4.139 4.223-2.286 0-4.14-1.891-4.14-4.224 0-2.332 1.854-4.224 4.14-4.224 2.286 0 4.14 1.892 4.14 4.224"/>
+              <path stroke="#565959" d="M40.746 10.35c0 2.332-1.853 4.223-4.139 4.223-2.286 0-4.14-1.891-4.14-4.224 0-2.332 1.854-4.224 4.14-4.224 2.286 0 4.14 1.892 4.14 4.224z"/>
+              <path fill="#F9B55A" d="M28.36 25.296c.319-4.354 3.916-7.798 8.247-7.798 4.33 0 7.929 3.444 8.247 7.798H28.36z"/>
+              <path stroke="#565959" d="M28.36 25.296c.319-4.354 3.916-7.798 8.247-7.798 4.33 0 7.929 3.444 8.247 7.798H28.36z"/>
+              <path stroke="#494949" d="M28.84 16.025a.18.18 0 0 1-.128-.054.188.188 0 0 1 0-.262l1.86-1.898-1.86-1.899a.187.187 0 0 1 0-.261.178.178 0 0 1 .257 0l1.989 2.029a.187.187 0 0 1 0 .262l-1.989 2.029a.178.178 0 0 1-.128.054zM25.09 22.766l-1.988-2.029a.187.187 0 0 1 0-.263l1.989-2.028a.178.178 0 0 1 .256 0 .187.187 0 0 1 0 .261l-1.86 1.9 1.86 1.897c.071.072.071.19 0 .262a.18.18 0 0 1-.256 0z"/>
+            </g>
+          </svg>
+        </div>
+          <div class="col-md-10 row" style="padding-left: 10%">
+              <div class="row" id="interview_type"></div>
+                <div class="row" style="margin-top: 5px">
+                  <button class="btn btn-info find_live_peer_btn" id="find_live_peer_btn">Start Mock Interview</button>
+                </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script defer>
+    // Disable google one tap auto Prompt
+    window.googleOneTapConfig = window.googleOneTapConfig || {};
+    window.googleOneTapConfig.disableAutoPropmt = true;
+    window.addEventListener('DOMContentLoaded', function() {
+      $.ajax({
+        url: '/get_user_options/',
+        success: function (resp) {
+          $('#welcome-page-nav').html(resp.header_html);
+          $('meta[name="csrf-token"]').attr('content', resp.csrf_token);
+          $('[name="authenticity_token"]').each(function (index, el) {
+              $(el).val(resp.csrf_token);
+          });
+          !resp.logged_in && window.googleOneTapConfig.showGooglePrompt();
+        }
+      });
+    });
+  </script>
+
+
+    <link rel="prefetch" href=https://assets.interviewbit.com/assets/web/problems-fa36c596e32d948deb33b811a295238aab9fdb6a0f105fe741481682516b1c9f.css.gz as="style" >
+    <!-- <link rel="prefetch" href=https://assets.interviewbit.com/assets/web/problems-04a66f210ed05a8e8d16b5da768e2c29ac8b8e181d55a213ea4f35e3f444a72f.js.gz as="script" > -->
+
+
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMKZTRG" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+
+<script>
+    var gaSendMethod = 'send';
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-56207880-1', {'userId':'1150769', 'siteSpeedSampleRate': 100});
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+
+    // added so that the files that are common on both ib and scaler can handle their respective ga calls
+    window.trackGaEvent = function(...args) {
+        const gaArgs = [gaSendMethod, 'event', ...args];
+        window.ga(...gaArgs);
+        // This is a temporary workaround
+        if (gaArgs[1] !== 'exception' && typeof storeEsEvent !== 'undefined') {
+            let eventTitle = "";
+            for (let i = 2; i < gaArgs.length; i++) {
+                if (i != 2)
+                    eventTitle = eventTitle + "-";
+                eventTitle = eventTitle + gaArgs[i];
+            }
+            storeEsEvent(eventTitle);
+        }
+    }
+</script>
+
+<div id="g_id_onload"
+  data-client_id="555034069712-3l6fq4ijgqmbufisic1da21ov6gmh83k.apps.googleusercontent.com"
+  data-login_uri="https://www.interviewbit.com/google_one_tap/"
+  data-auto_prompt="false"
+  data-context="use">
+</div>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script>
+  (function (window, undefined) {
+    var logged_in = 'true';
+    var showPrompt = function () {
+      google.accounts.id.prompt();
+    };
+
+    window.googleOneTapConfig = window.googleOneTapConfig || {};
+    window.googleOneTapConfig.showGooglePrompt = showPrompt;
+
+    window.onGoogleLibraryLoad = function () {
+      var disableAutoPropmt = window.googleOneTapConfig.disableAutoPropmt;
+
+      if (logged_in === 'false' && !disableAutoPropmt) {
+        showPrompt();
+      }
+    };
+  })(window);
+</script>
+
+</body>
+</html>

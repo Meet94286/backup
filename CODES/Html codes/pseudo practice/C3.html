@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        body {
+            background: linear-gradient(to left, yellow 0%, #d7d7d7 100%);
+        }
+        .contactUs {
+            margin-top: 2em;
+        }
+        a:link{
+            display: block;
+            margin: 1em;
+            color: red;
+            text-decoration: none;
+            
+        }
+        a[href^='#a']::before{
+            content: 'a';
+            border-radius: 50%;
+            border: 1px solid red;
+            width: 5px;
+            height: 50px;
+            padding: 5px;
+            border-radius: 75%;
+            margin: 1em;
+           
+        }
+        a[href^='#b']::before{
+            content: 'b';
+            border-radius: 50%;
+            border: 1px solid blue   ;
+            width: 5px;
+            height: 50px;
+            padding: 5px;
+            border-radius: 75%;
+            margin: 1em;
+        }
+        a[href^='#c']::before{
+            content: 'c';
+            border-radius: 50%;
+            border: 1px solid green ;
+            width: 5px;
+            height: 50px;
+            padding: 5px;
+            border-radius: 75%;
+            margin: 1em;
+        }
+        p::selection{
+            color: tomato;
+        }
+        p::before{
+            content: '"';
+        }
+        p:after{
+        content: '" -MARTIN';
+        }
+        p::first-line{
+            color: blue;
+            }
+
+
+     </style>
+   </head>
+   <body>
+     <p>
+        Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+     </p>
+    
+     <div class="contactUs">
+        <span>Contact us:</span>
+        <a href="#abc">abc.zmail.com</a>
+        <a href="#bcd">bcd.zmail.com</a>
+        <a href="#ajl">ajl.zmail.com</a>
+        <a href="#cjdl">cjdl.zmail.com</a>
+     </div>
+   </body>
+</html>

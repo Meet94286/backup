@@ -1,0 +1,78 @@
+body {
+    background-color: #e0e0e0;
+    padding-bottom: 80px;
+    position: relative;
+    /*overflow-x: hidden;*/
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    padding-top: 60px;
+  }
+  html{
+    height: 100%;
+  }
+  .navbar-light{
+    background-color: rosybrown;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+  }
+  .btn-light {
+    margin-top: 10px;
+    margin-right: 25px;
+  }
+  #logo{
+    height: 60px;
+    width: 60px;
+  }
+  .logo-div{
+    margin-left: 2%;
+    height: 60px;
+  }
+  .login-div{
+  margin-right: 2%;
+  }
+footer{
+    background-color: rosybrown;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contact-div{
+    margin-left: 2%;
+  }
+  #contact{
+    text-decoration:none;
+    color: black;
+  }
+ .apps{
+    margin-right: 2%;
+  }
+  #name{
+    
+    font-size: 10px;
+  }
+  .btn {
+    float: none;
+  }
+  .login-btn {
+    float: right;
+  }
+  .form{
+  margin-bottom: 1.5em;
+  margin-top: 0.5em;
+  }
+  #e-mail{
+  margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  #modal-footer {
+    justify-content: center;
+    padding-bottom: 0em;
+    
+  }
+  

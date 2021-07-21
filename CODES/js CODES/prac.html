@@ -1,0 +1,98 @@
+<!--<html>
+  <head>
+      <title>Selectors in JavaScript</title>
+  </head>
+  <body>
+      <p class="select-by-class"></p>
+      <p id="select-by-id"></p>
+      <p class="select-by-class"></p>
+      <script>
+          document.getElementById('select-by-id').innerHTML = "Selected by ID";  
+          document.getElementsByClassName('select-by-class')[1].innerHTML = "Selected by Class Name";
+      </script>
+  </body>
+</html>
+
+<!doctype html>
+<html>
+    <head>
+        <title>Styling </title>
+    </head>
+    <body>
+        <p>Hi</p>
+        <p id="para">Welcome to upGrad</p>
+        <script>
+            document.getElementById('para').style.margin =  '0%';
+        </script>
+    </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>JavaScript</title>
+      <style>
+        p {
+          color: red;
+        }
+      </style>
+  </head>
+  <body>
+      <p style="color: blue;">This text is here</p>
+      <script>
+          document.getElementsByTagName('p')[0].style.color = 'grey'; 
+      </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>JavaScript</title>
+     <script>
+         document.getElementsByTagName('p')[0].addEventListener('click', function(){
+                         alert('learning')
+                        }
+                        );
+         
+
+
+     </script>
+  </head>
+  <body>
+      <p >Helo</p>
+      <script>
+            document.getElementsByTagName('p')[0].addEventListener('click', function(){
+                         alert('learnt')});
+         
+         
+      </script>
+  </body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Event Listener</title>
+  </head>
+  <body>
+    <div>
+        <h1>
+          My favourite books of all time
+        </h1>
+        <ul>
+          <li class="bookName">The Kite Runner</li>
+          <li class="bookName">To Kill a Mockingbird</li>
+          <li class="bookName">Kafka On The Shore</li>
+        </ul>
+    </div>
+    <script>
+        document.getElementsByClassName('bookName')[1].addEventListener("mousedown", function() {
+            alert("This book was published in 1960")
+        });
+    </script>
+  </body>
+</html>
+
+
+
+ 

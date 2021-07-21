@@ -1,0 +1,16 @@
+div{
+    width: 100px;
+    height: 100px;
+}
+#div1{
+    background-color: pink;
+    float: left;
+}
+#div2{
+    background-color: purple;
+    float: right;
+}
+#div3{
+    background-color: gray;
+    float: right;
+}

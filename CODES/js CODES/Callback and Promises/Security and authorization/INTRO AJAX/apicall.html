@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <style>
+ #map {
+ height: 100%;
+ }
+ html, body {
+ height: 100%;
+ margin: 0;
+ padding: 0;
+ }
+ </style>
+ </head>
+ <body>
+ <div id="map"></div>
+ <script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtitW_pphinQwsDd6hUoh0Y1jD6JO1W5s&callback=initMap"></script>
+ <script>
+ var map;
+ function initMap() {
+ map = new google.maps.Map(document.getElementById("map"), {
+ center: { lat: -34.397, lng: 150.644 },
+ zoom: 2
+ });
+ }
+ </script>
+ </body>
+</html>
+
+<!-- const data = null;
+
+const xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+	if (this.readyState === this.DONE) {
+		console.log(this.responseText);
+	}
+});
+
+xhr.open("GET", "https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete?query=eiffel%20tower&lang=en_US&units=km");
+xhr.setRequestHeader("x-rapidapi-key", "e64884c8aamshdfb72ab55cb56c0p122fffjsn80ebf167af2b");
+xhr.setRequestHeader("x-rapidapi-host", "travel-advisor.p.rapidapi.com");
+
+xhr.send(data); -->
+
+fetch("https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete?query=eiffel%20tower&lang=en_US&units=km", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "e64884c8aamshdfb72ab55cb56c0p122fffjsn80ebf167af2b",
+		"x-rapidapi-host": "travel-advisor.p.rapidapi.com"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
+});

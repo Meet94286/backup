@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div:first-child:hover{
+               
+                background-color: aqua;
+            }
+            div:first-child{
+                box-shadow: 1px 1px 1px 1px #d7d7d7;
+width: 200px;
+padding: 1em;
+margin: 1em 1em 1em 0em;
+               
+           }
+            input:checked~span{
+                font-size: 2em;
+                color: blue;
+            }
+            div:last-child{
+                display: none;
+            }
+            div:first-child:focus~div:last-child{
+                margin: 1em;
+                display: block;
+            }
+            div:first-child::first-letter{
+                font-size: 2em;
+            }
+           
+
+
+
+
+
+        </style>
+    </head>
+<body>
+        <div tabindex="1">Select user status</div>
+        <div>
+            <label>
+                <input type="checkbox">
+                <span>2 minutes ago</span>
+            </label>    
+        </div>
+
+        <div>
+            <label>
+                <input type="checkbox">
+                <span>1 hour ago</span>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <input type="checkbox">
+                <span>yesterday</span>
+            </label>
+        </div>
+    <div>
+        <input type="submit">
+    </div>
+
+</body>
+</html>
